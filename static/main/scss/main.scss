@@ -253,10 +253,38 @@ nav img:hover{
 
 @media screen and (max-width: 600px) {
     .about img{
-        width: 215px;
+        width: 215px;   
         margin-left: 10px;
+        margin-right: 10px;
+    }
+    .about-text{
+        margin: 20px;
+    }
+
+    .about-text button{
+        margin-left: 1px;
+        margin-right: 1px;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .about img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 665px) {
+    nav ul li {
+        margin-right: 5%;
+    }
+}
+
+@media screen and (max-width: 411px) {
+    nav ul li {
+        margin-left: 100px;
+    }
+}
+
 .about-text{
     width: 550px;
 }

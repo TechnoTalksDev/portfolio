@@ -3,8 +3,7 @@
   padding: 0;
   margin: 0;
   font-family: "Rajdhani", sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   scrollbar-width: thin;
   scrollbar-color: #38b6ff transparent;
 }
@@ -45,29 +44,24 @@ span {
 @-webkit-keyframes fadeInAnimation {
   0% {
     /*opacity: 0.9;*/
-    -webkit-filter: brightness(10%);
-            filter: brightness(10%);
+    filter: brightness(10%);
   }
   100% {
     /*opacity: 1;*/
-    -webkit-filter: brightness(100%);
-            filter: brightness(100%);
+    filter: brightness(100%);
   }
 }
 
 @keyframes fadeInAnimation {
   0% {
     /*opacity: 0.9;*/
-    -webkit-filter: brightness(10%);
-            filter: brightness(10%);
+    filter: brightness(10%);
   }
   100% {
     /*opacity: 1;*/
-    -webkit-filter: brightness(100%);
-            filter: brightness(100%);
+    filter: brightness(100%);
   }
 }
-
 .hero {
   height: 100vh;
   width: 100vw;
@@ -78,15 +72,9 @@ span {
 }
 
 nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 20px;
   padding-left: 2%;
   padding-right: 2%;
@@ -109,19 +97,14 @@ nav ul li a {
 nav ul li a:hover {
   color: #38b6ff;
   font-size: 27px;
-  -webkit-filter: drop-shadow(10px 10px 10px grey);
-          filter: drop-shadow(10px 10px 10px grey);
-  -webkit-transition: .4s;
-  transition: .4s;
+  filter: drop-shadow(10px 10px 10px grey);
+  transition: 0.4s;
 }
 
 nav img:hover {
-  -webkit-transform: scale(1.08);
-          transform: scale(1.08);
-  -webkit-filter: drop-shadow(10px 10px 10px grey);
-          filter: drop-shadow(10px 10px 10px grey);
-  -webkit-transition: .4s;
-  transition: .4s;
+  transform: scale(1.08);
+  filter: drop-shadow(10px 10px 10px grey);
+  transition: 0.4s;
 }
 
 .title {
@@ -135,25 +118,20 @@ nav img:hover {
   color: white;
   background-color: transparent;
   border: 2px solid #38b6ff;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 7px 40px 7px 40px;
   margin-top: 10px;
   margin-right: 5%;
   margin-left: 5%;
   border-radius: 5px;
-  -webkit-filter: drop-shadow(5px 5px 5px grey);
-          filter: drop-shadow(5px 5px 5px grey);
+  filter: drop-shadow(5px 5px 5px grey);
 }
 
 .title btn:hover {
   cursor: pointer;
   font-size: 26px;
-  -webkit-filter: drop-shadow(10px 10px 10px grey);
-          filter: drop-shadow(10px 10px 10px grey);
-  -webkit-transition: .4s;
-  transition: .4s;
+  filter: drop-shadow(10px 10px 10px grey);
+  transition: 0.4s;
 }
 
 .title a {
@@ -177,75 +155,52 @@ nav img:hover {
 
 @-webkit-keyframes flicker {
   0% {
-    -webkit-filter: drop-shadow(8.7px 8.7px 8.7px grey);
-            filter: drop-shadow(8.7px 8.7px 8.7px grey);
+    filter: drop-shadow(8.7px 8.7px 8.7px grey);
   }
   25% {
-    -webkit-filter: drop-shadow(9.8px 9.8px 9.8px grey);
-            filter: drop-shadow(9.8px 9.8px 9.8px grey);
+    filter: drop-shadow(9.8px 9.8px 9.8px grey);
   }
   50% {
-    -webkit-filter: drop-shadow(9.5px 9.5px 9.5px grey);
-            filter: drop-shadow(9.5px 9.5px 9.5px grey);
+    filter: drop-shadow(9.5px 9.5px 9.5px grey);
   }
   75% {
-    -webkit-filter: drop-shadow(9px 9px 9px grey);
-            filter: drop-shadow(9px 9px 9px grey);
+    filter: drop-shadow(9px 9px 9px grey);
   }
   100% {
-    -webkit-filter: drop-shadow(10px 10px 10px grey);
-            filter: drop-shadow(10px 10px 10px grey);
+    filter: drop-shadow(10px 10px 10px grey);
   }
 }
 
 @keyframes flicker {
   0% {
-    -webkit-filter: drop-shadow(8.7px 8.7px 8.7px grey);
-            filter: drop-shadow(8.7px 8.7px 8.7px grey);
+    filter: drop-shadow(8.7px 8.7px 8.7px grey);
   }
   25% {
-    -webkit-filter: drop-shadow(9.8px 9.8px 9.8px grey);
-            filter: drop-shadow(9.8px 9.8px 9.8px grey);
+    filter: drop-shadow(9.8px 9.8px 9.8px grey);
   }
   50% {
-    -webkit-filter: drop-shadow(9.5px 9.5px 9.5px grey);
-            filter: drop-shadow(9.5px 9.5px 9.5px grey);
+    filter: drop-shadow(9.5px 9.5px 9.5px grey);
   }
   75% {
-    -webkit-filter: drop-shadow(9px 9px 9px grey);
-            filter: drop-shadow(9px 9px 9px grey);
+    filter: drop-shadow(9px 9px 9px grey);
   }
   100% {
-    -webkit-filter: drop-shadow(10px 10px 10px grey);
-            filter: drop-shadow(10px 10px 10px grey);
+    filter: drop-shadow(10px 10px 10px grey);
   }
 }
-
 .l-social {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .l-social a {
   width: 45px;
   height: 45px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   border: 2px solid #38b6ff;
   border-radius: 50%;
@@ -257,16 +212,12 @@ nav img:hover {
 }
 
 .l-social a:hover {
-  -webkit-transform: scale(1.08);
-          transform: scale(1.08);
-  -webkit-transition: .4s;
-  transition: .4s;
+  transform: scale(1.08);
+  transition: 0.4s;
 }
 
 .l-social i {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -305,18 +256,42 @@ nav img:hover {
   .about img {
     width: 286px;
   }
+
   .title {
     top: 15%;
   }
 }
-
 @media screen and (max-width: 600px) {
   .about img {
     width: 215px;
     margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .about-text {
+    margin: 20px;
+  }
+
+  .about-text button {
+    margin-left: 1px;
+    margin-right: 1px;
   }
 }
-
+@media screen and (max-width: 500px) {
+  .about img {
+    display: none;
+  }
+}
+@media screen and (max-width: 665px) {
+  nav ul li {
+    margin-right: 5%;
+  }
+}
+@media screen and (max-width: 411px) {
+  nav ul li {
+    margin-left: 100px;
+  }
+}
 .about-text {
   width: 550px;
 }
@@ -329,14 +304,9 @@ nav img:hover {
   width: 1130px;
   max-width: 95%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .about-text h2 {
@@ -371,8 +341,6 @@ button {
   font-size: 24px;
   color: #151D21;
   background: #38b6ff;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 7px 40px 7px 40px;
   margin-top: 30px;
@@ -387,8 +355,7 @@ button:hover {
   border: 2px solid #38b6ff;
   cursor: pointer;
   color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 /*services*/
@@ -400,8 +367,6 @@ button:hover {
   font-size: 20px;
   color: #151D21;
   background: #38b6ff;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 7px 20px 7px 20px;
   margin-top: 20px;
@@ -441,20 +406,12 @@ button:hover {
 }
 
 .services-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   min-height: 400px;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
 }
 
 .services-card {
@@ -491,19 +448,11 @@ button:hover {
 .projects-container {
   /*width: 1000px;*/
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .projects-container .card {
@@ -516,36 +465,26 @@ button:hover {
   width: 300px;
   height: 200px;
   border-radius: 10px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .projects-container .card .face.face1 {
   position: relative;
   background: #333;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
+  transform: translateY(100px);
 }
 
 .projects-container .card:hover .face.face1 {
   background: #38b6ff;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 
 .projects-container .card .face.face1 .content {
   opacity: 0.2;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -569,27 +508,17 @@ button:hover {
 .projects-container .card .face.face2 {
   position: relative;
   background: #333;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-  -webkit-transform: translateY(-100px);
-          transform: translateY(-100px);
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(-100px);
 }
 
 .projects-container .card:hover .face.face2 {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 
 .projects-container .card .face.face2 .content p {
@@ -602,8 +531,6 @@ button:hover {
   font-size: 20px;
   color: #151D21;
   background: #38b6ff;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 7px 15px 7px 15px;
   margin-top: 25px;
@@ -611,8 +538,7 @@ button:hover {
   border: none;
   border-radius: 5px;
   text-align: center;
-  -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 .projects-container .card .face.face2 .content a:hover {
@@ -627,12 +553,8 @@ button:hover {
   width: 100%;
   height: 400px;
   background-color: #333;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -659,30 +581,18 @@ footer p:nth-child(2) {
 }
 
 .social {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .social a {
   width: 45px;
   height: 45px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   background: #38b6ff;
   border-radius: 50%;
   margin: 22px 10px;
@@ -693,16 +603,12 @@ footer p:nth-child(2) {
 }
 
 .social a:hover {
-  -webkit-transform: scale(1.08);
-          transform: scale(1.08);
-  -webkit-transition: .4s;
-  transition: .4s;
+  transform: scale(1.08);
+  transition: 0.4s;
 }
 
 .social i {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -720,5 +626,4 @@ footer p:nth-child(2) {
     color: white;
     text-align: center;
 }
-*/
-/*# sourceMappingURL=main.css.map */
+*//*# sourceMappingURL=main.css.map */
