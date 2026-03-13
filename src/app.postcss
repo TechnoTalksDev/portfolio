@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+html,
+body {
+	@apply h-full overflow-hidden;
+}
+
+
+@font-face {
+	/* Reference name */
+	font-family: 'Rajdhani';
+	/* For multiple files use commas, ex: url(), url(), ... */
+	src: url('/fonts/Rajdhani-Regular.ttf');
+}
+
+
+/* NOTE: set your target theme name (ex: skeleton, wintry, modern, etc) */
+
+:root [data-theme='techno'] {
+    --theme-font-family-base: 'Rajdhani', sans-serif;
+    --theme-font-family-heading: 'Rajdhani', sans-serif;
+    overflow-x: hidden;
+		
+		/* ... */
+}
+
+.gradient-heading {
+	@apply bg-clip-text text-transparent box-decoration-clone;
+	/* Direction */
+	@apply bg-gradient-to-br;
+	/* Color Stops */
+	@apply from-white via-primary-500 to-white;
+}
+
+.gradient-bar {
+	/* Direction */
+	@apply bg-gradient-to-r;
+	/* Color Stops */
+	@apply from-primary-500 via-success-500 to-tertiary-500;
+}
+
+.animate-gradient {
+	background-size: 300%;
+	-webkit-animation: animatedgradient 6s ease infinite alternate;
+	-moz-animation: animatedgradient 6s ease infinite alternate;
+	animation: animatedgradient 6s ease infinite alternate;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+							
