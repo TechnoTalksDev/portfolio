@@ -278,7 +278,7 @@
 
 	const experiences = [
     {
-        date: 'August 2023 - Present',
+        date: 'August 2023 - 2025',
         company: 'Exothermic Alpha',
         position: 'Lead Developer',
         blurb: 'Developing motion algorithms and autonomous routines for VEX Robotics, optimizing localization and system performance.',
@@ -299,12 +299,20 @@
 				skills: [0, 6, 9]
     },
     {
-        date: 'Oct. 2024 - Present',
+        date: 'Oct. 2024 - 2024',
         company: 'NC FBLA',
         position: 'Tech Committee',
         blurb: 'Maintain NC FBLA’s tech initiatives, develop mobile solutions, and build digital tools for local business partners.',
 				skills: [10]
     }
+	,
+	{
+		date: '2025 - Present',
+		company: 'STEAMOJI ROBOTICS',
+		position: 'Public Relations',
+		blurb: 'A student-created and led robotics organization. Created a website to inform parents and students of updates, including live feeds of event and award data. Currently used as the primary communication center for all parents and students of the organization.',
+		skills: [0, 1, 8]
+	}
 ];
 
 
@@ -366,9 +374,9 @@
 
 	</div>
 
-	<div id="experience" class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
-		<div class="h-full flex flex-col items-center justify-center">	
-		<NewExperience	experiences={experiences} skills={skills}/>
+	<div id="experience" class="container min-h-[100vh] h-fit w-fit mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
+		<div class="h-full flex flex-col col-span-2 flex-wrap items-center justify-center my-8 ">	
+			<NewExperience	experiences={experiences} skills={skills}/>
 		</div>
 		<!--arrow-->
 		<div class="flex-end">

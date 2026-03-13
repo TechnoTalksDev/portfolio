@@ -10,7 +10,8 @@
 	class="card variant-glass-surface flex flex-col p-4 sm:p-6 w-fit max-w-[98vw] overflow-x-auto overflow-y-hidden h-fit row-start-2"
 	style="grid-column: 1 / 2;"
 >
-	<div class="flex flex-col gap-6 justify-items-center w-fit">
+	<div class="flex flex-row flex-wrap gap-6 justify-center w-fit max-w-[56rem]">
+
 		{#each experiences as experience, index}
 			<div
 				class="card card-hover variant-glass-surface p-4 relative flex flex-row items-center w-[25rem] max-w-[85vw] max-h-[15rem]"

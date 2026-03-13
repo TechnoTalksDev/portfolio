@@ -5,7 +5,7 @@
   export let skills;
 </script>
 
-<div class="card variant-glass-surface flex flex-col h-[98vh] w-[25rem] max-w-[98vw] overflow-x-hidden overflow-y-visible custom-scrollbar">
+<div class="card variant-glass-surface flex flex-col h-[98vh] w-fit max-w-[98vw] overflow-x-hidden overflow-y-visible custom-scrollbar">
 
   {#each projects as project, index}
     <div class="card-hover w-[25rem] h-fit my-1 mx-1 py-2 relative ">
