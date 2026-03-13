@@ -5,10 +5,13 @@
   export let skills;
 </script>
 
-<div class="card variant-glass-surface flex flex-col h-[98vh] w-fit max-w-[98vw] overflow-x-hidden overflow-y-visible custom-scrollbar">
-
+<div
+  class="card variant-glass-surface flex flex-col p-4 sm:p-6 w-fit max-w-[98vw] h-fit row-start-2"
+  style="grid-column: 1 / 2;"
+>
+  <div class="flex flex-row flex-wrap gap-2 justify-center w-fit max-w-[56rem]">
   {#each projects as project, index}
-    <div class="card-hover w-[25rem] h-fit my-1 mx-1 py-2 relative ">
+    <div class="card-hover w-[25rem] max-w-[85vw] h-fit py-2 relative">
       <div id="bgimg" class="w-full absolute inset-0 z-[-1] h-full project-hero bg-cover rounded-2xl" style="background-image: url('{project.img}'); background-position: center center;"></div>
 
       <div id="content"class="text-left ml-2 relative">
@@ -49,8 +52,8 @@
         <p class="opacity-[85%]">{@html project.description}</p>
       </div>
     </div>
-  {/each}			
-
+  {/each}
+  </div>
 </div>
 
 
@@ -64,32 +67,5 @@
 	-webkit-mask: var(--mask); 
   mask: var(--mask);
 }
-
-.custom-scrollbar {
-  scrollbar-width: thin; /* Firefox */
-
-}
-
-/* Webkit (Chrome, Edge, Safari) */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 6px; /* Thickness */
-  border-radius: 10px; /* Ensures the scrollbar itself is rounded */
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent; /* Track color */
-  border-radius: 10px; /* Fully rounds the track */
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(100, 100, 255, 0.7); /* Thumb color */
-  border-radius: 10px; /* Fully rounds the thumb */
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(100, 100, 255, 0.9); /* Darker on hover */
-}
-
-
 
 </style>

@@ -389,9 +389,8 @@
 	</div>
 
 
-	<div id="projects" class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
-		<div class="h-full flex flex-col items-center justify-center">	
-
+	<div id="projects" class="container min-h-[100vh] h-fit w-fit mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
+		<div class="h-full flex flex-col items-center justify-center my-8">	
 			<ProjectCard projects={projects} skills={skills} />
 		</div>
 	</div>

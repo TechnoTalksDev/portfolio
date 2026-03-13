@@ -9,11 +9,10 @@
 
 	let navs = {
 		navbar: [
-      { label: 'Discord', icon: DiscordSvg, href: 'https://discord.gg/8vNHAA36fR' },
+			{ label: 'Mail', icon: GmailSvg, href: 'mailto:chandan.chengalvala@gmail.com' },
 			{ label: 'Github', icon: GithubSvg, href: 'https://github.com/TechnoTalksDev' },
-			
 			{ label: 'LinkedInSvg', icon: LinkedInSvg, href: 'https://www.linkedin.com/in/murali-sri-chandan-chengalvala-a31501288/' },
-      { label: 'Mail', icon: GmailSvg, href: 'mailto:chandan.chengalvala@gmail.com' },
+      { label: 'Discord', icon: DiscordSvg, href: 'https://discord.gg/8vNHAA36fR' },
 		]
 	};
 </script>
