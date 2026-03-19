@@ -343,7 +343,7 @@
 <div
 	id="m-blob"
 	class="absolute top-[-6rem] left-0 right-0 ml-auto mr-auto w-[10rem] h-[8rem] rounded-[50%] bg-gradient-to-br from-surface-500 via-primary-500 to-white opacity-40 overflow-x-hidden"
-	style="animation-name: spin; animation-duration: 30s;"
+	
 ></div>
 
 <!--
@@ -352,7 +352,7 @@
 -->
 
 <div class="h-[100vh] w-[100vw] backdrop-blur-3xl overflow-x-hidden scroll-smooth">
-	<div id="hero" class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
+	<div id="hey" class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
 		
 		
 		

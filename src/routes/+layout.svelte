@@ -1,7 +1,8 @@
 <script lang="ts">
 	import '../app.postcss';
 	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
-
+	import Dock from '$lib/components/Dock.svelte';
+	import DockIcon from '$lib/components/DockIcon.svelte';
 	// Highlight JS
 	import hljs from 'highlight.js/lib/core';
 	import 'highlight.js/styles/github-dark.css';
@@ -26,39 +27,100 @@
 	import Unami from '$lib/components/unami.svelte';
 
 	initializeStores();
+
+	let sections = ['hey', 'experience', 'projects', 'contact'];
+	let currentSection = sections[0];
 </script>
 <Unami />
 <Toast position="br" padding="p-3"/>
 <!-- App Shell -->
 <AppShell>
 
-	<!--
-	<div class = "absolute left-0 right-0 mt-6 ml-auto mr-auto flex flex-col items-center z-[2] w-min">
-		<div class="flex flex-row">
+	
+	<div class = "absolute left-0 right-0 mt-2 ml-auto mr-auto flex flex-col items-center z-[2] w-fit">
+			<Dock
+		direction="middle"
+		class="card border-1 border-zinc-100/10 variant-glass w-full"
+		let:mouseX
+		let:distance
+		let:magnification
+	>
+
+			<DockIcon mode="text" {mouseX} {magnification} {distance}>
 			<a
-				class="btn btn-sm variant-ghost-surface drop-shadow-xl"
-				href="#about"
+				class="btn btn-sm drop-shadow-xl text-lg whitespace-nowrap hover:underline {currentSection === 'hey' ? 'gradient-heading animate-gradient' : ''}" 
+				href="#hey"
 				rel="noreferrer"
 			>
-				About
+				hey
 			</a>
-			<a
-				class="btn btn-sm variant-ghost-surface drop-shadow-xl mx-1"
+			</DockIcon>
+
+			<DockIcon mode="text" {mouseX} {magnification} {distance}>
+										<a
+				class="btn btn-sm drop-shadow-xl mx-1 text-lg whitespace-nowrap"
+				href="#experience"
+				rel="noreferrer"
+			>
+				experience
+			</a>
+			</DockIcon>
+
+			<DockIcon mode="text" {mouseX} {magnification} {distance}>
+							<a
+				class="btn btn-sm  drop-shadow-xl mx-1 text-lg whitespace-nowrap"
 				href="#projects"
 				rel="noreferrer"
 			>
-				Projects
+				projects
 			</a>
-			<a
-				class="btn btn-sm variant-ghost-surface drop-shadow-xl"
+			</DockIcon>
+
+			<DockIcon mode="text" {mouseX} {magnification} {distance}>
+							<a
+				class="btn btn-sm  drop-shadow-xl text-lg whitespace-nowrap"
 				href="#contact"
 				rel="noreferrer"
 			>
-				Contact
+				contact
 			</a>
-		</div>
+			</DockIcon>
+
+	</Dock>
+		
+		
+		<!-- <div class="flex flex-row ">
+			<a
+				class="btn btn-sm drop-shadow-xl text-lg"
+				href="#about"
+				rel="noreferrer"
+			>
+				hey
+			</a>
+						<a
+				class="btn btn-sm drop-shadow-xl mx-1 text-lg"
+				href="#experience"
+				rel="noreferrer"
+			>
+				experiences
+			</a>
+			<a
+				class="btn btn-sm  drop-shadow-xl mx-1 text-lg"
+				href="#projects"
+				rel="noreferrer"
+			>
+				projects
+			</a>
+			<a
+				class="btn btn-sm  drop-shadow-xl text-lg"
+				href="#contact"
+				rel="noreferrer"
+			>
+				contact
+			</a>
+		</div> -->
 	</div>
-	-->
+	
 	<!-- Page Route Content -->
 	<slot />
 </AppShell>

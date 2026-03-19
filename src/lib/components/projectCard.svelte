@@ -9,14 +9,14 @@
   class="card variant-glass-surface flex flex-col p-4 sm:p-6 w-fit max-w-[98vw] h-fit row-start-2"
   style="grid-column: 1 / 2;"
 >
-  <div class="flex flex-row flex-wrap gap-2 justify-center w-fit max-w-[56rem]">
+  <div class="flex flex-row flex-wrap gap-2 justify-center w-fit max-w-[90vw]">
   {#each projects as project, index}
-    <div class="card-hover w-[25rem] max-w-[85vw] h-fit py-2 relative">
-      <div id="bgimg" class="w-full absolute inset-0 z-[-1] h-full project-hero bg-cover rounded-2xl" style="background-image: url('{project.img}'); background-position: center center;"></div>
+    <div class="card card-hover variant-glass-surface w-[25rem] max-w-[85vw] h-fit py-2 relative">
+      <div id="bgimg" class="w-full absolute inset-0 z-[-1] h-[70%] project-hero bg-cover rounded-2xl" style="background-image: url('{project.img}'); background-position: center center;"></div>
 
-      <div id="content"class="text-left ml-2 relative">
+      <div id="content"class="text-left ml-2 relative mt-32">
         <div class="flex flex-row items-center">
-          <h3 class="h2">{project.name}</h3>
+          <h3 class="h2 font-semibold">{project.name}</h3>
           {#if project.link}
           <a href={project.link} target="_blank"><Link class="mx-2 w-[1.5rem]" /></a>
           {/if}
@@ -33,10 +33,10 @@
           >
           {/if}
         </div>
-        <div class = "flex flex-row items-center opacity-70">
+        <div class = "flex flex-row items-center ">
           {#each project.skills as index}
             
-              <div class="flex-none w-[15px] mr-2">
+              <div class="flex-none w-[20px] mr-2">
                 <a href="/" class="">
                   <img src={skills[index].img} alt={skills[index].name + ' logo'} class=""/>
                 </a>
@@ -44,12 +44,12 @@
             
           {/each}
           {#each project.tags as tag}
-          <span class="text-sm mr-1 text-primary-400">#{tag}</span>
+          <span class="text-md mr-1 text-primary-400">#{tag}</span>
           {/each}
         </div>
 
 
-        <p class="opacity-[85%]">{@html project.description}</p>
+        <p class="font-normal mt-4">{@html project.description}</p>
       </div>
     </div>
   {/each}
@@ -62,7 +62,7 @@
 <style>
 
 .project-hero {
-  --mask: linear-gradient(-90deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+  --mask: linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
 
 	-webkit-mask: var(--mask); 
   mask: var(--mask);

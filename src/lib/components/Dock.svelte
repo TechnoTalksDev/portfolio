@@ -23,7 +23,7 @@
   let dockElement: HTMLDivElement;
   let mouseX = Infinity;
   function handleMouseMove(e: MouseEvent) {
-    mouseX = e.pageX;
+    mouseX = e.clientX;
   }
 
   function handleMouseLeave() {
