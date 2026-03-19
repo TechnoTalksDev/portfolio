@@ -79,9 +79,9 @@
 					const id = (entry.target as HTMLElement).id;
 					const ratio = entry.intersectionRatio;
 
-					console.log(
-						`[${id}] intersectionRatio: ${(ratio * 100).toFixed(1)}%, isIntersecting: ${entry.isIntersecting}`
-					);
+					// console.log(
+					// 	`[${id}] intersectionRatio: ${(ratio * 100).toFixed(1)}%, isIntersecting: ${entry.isIntersecting}`
+					// );
 
 					if (entry.isIntersecting && ratio > maxIntersectionRatio) {
 						maxIntersectionRatio = ratio;
@@ -89,9 +89,9 @@
 					}
 				});
 
-				console.log(
-					`Largest section: ${largestSection} (${(maxIntersectionRatio * 100).toFixed(1)}%)\n`
-				);
+				// console.log(
+				// 	`Largest section: ${largestSection} (${(maxIntersectionRatio * 100).toFixed(1)}%)\n`
+				// );
 
 				// Only update if the section has at least 50% visibility
 				if (maxIntersectionRatio >= 0.5 && largestSection) {

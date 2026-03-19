@@ -28,8 +28,6 @@
 	import { currentSection } from '$lib/stores/sectionStore';
 
 	initializeStores();
-
-	$: console.log('Current Section:', $currentSection);
 </script>
 
 <Unami />
@@ -39,14 +37,14 @@
 	<div class="absolute left-0 right-0 mt-2 ml-auto mr-auto flex flex-col items-center z-[2] w-fit">
 		<Dock
 			direction="middle"
-			class="card border-1 border-zinc-100/10 variant-glass w-full"
+			class="card border-1 border-zinc-100/10 variant-glass w-full transition-all duration-500"
 			let:mouseX
 			let:distance
 			let:magnification
 		>
 			<DockIcon mode="text" {mouseX} {magnification} {distance}>
 				<a
-					class="btn btn-sm drop-shadow-xl text-lg whitespace-nowrap hover:underline {$currentSection ===
+					class="btn btn-sm drop-shadow-xl text-lg whitespace-nowrap hover:underline  {$currentSection ===
 					'hey'
 						? 'gradient-heading animate-gradient'
 						: ''}"

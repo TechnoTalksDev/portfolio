@@ -11,10 +11,10 @@
 >
 	<div class="flex flex-row flex-wrap gap-2 justify-center w-fit max-w-[90vw]">
 		{#each projects as project, index}
-			<div class="card card-hover variant-glass-surface w-[25rem] max-w-[85vw] h-fit py-2 relative">
+			<div class="card card-hover variant-glass-surface w-[25rem] max-w-[85vw] h-fit py-2 relative overflow-hidden">
 				<div
 					id="bgimg"
-					class="w-full absolute inset-0 z-[-1] h-[70%] project-hero bg-cover rounded-2xl"
+					class="w-full absolute inset-0 z-[-1] h-[70%] project-hero bg-cover "
 					style="background-image: url('{project.img}'); background-position: center center;"
 				></div>
 
