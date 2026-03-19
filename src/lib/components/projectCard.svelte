@@ -1,8 +1,31 @@
 <script>
 	import { Link } from 'lucide-svelte';
+	import ProjectDetailsModal from './ProjectDetailsModal.svelte';
 
-	export let projects;
-	export let skills;
+	/** @type {any[]} */
+	export let projects = [];
+	/** @type {any[]} */
+	export let skills = [];
+
+	/** @type {any | null} */
+	let selectedProject = null;
+
+	/** @param {any} project */
+	const openProjectModal = (project) => {
+		selectedProject = project;
+	};
+
+	const closeProjectModal = () => {
+		selectedProject = null;
+	};
+
+	/** @param {KeyboardEvent} event @param {any} project */
+	const handleCardKeydown = (event, project) => {
+		if (event.key === 'Enter' || event.key === ' ') {
+			event.preventDefault();
+			openProjectModal(project);
+		}
+	};
 </script>
 
 <div
@@ -10,22 +33,30 @@
 	style="grid-column: 1 / 2;"
 >
 	<div class="flex flex-row flex-wrap gap-2 justify-center w-fit max-w-[90vw]">
-		{#each projects as project, index}
-			<div class="card card-hover variant-glass-surface w-[25rem] max-w-[85vw] h-fit py-2 relative overflow-hidden">
+		{#each projects as project}
+			<div
+				class="card card-hover variant-glass-surface w-[25rem] max-w-[85vw] h-fit py-2 relative overflow-hidden cursor-pointer"
+				on:click={() => openProjectModal(project)}
+				on:keydown={(event) => handleCardKeydown(event, project)}
+				role="button"
+				tabindex="0"
+			>
 				<div
 					id="bgimg"
 					class="w-full absolute inset-0 z-[-1] h-[70%] project-hero bg-cover "
 					style="background-image: url('{project.img}'); background-position: center center;"
 				></div>
 
-				<div id="content" class="text-left ml-2 relative mt-32">
+				<div id="content" class="text-left ml-2 relative mt-40">
 					<div class="flex flex-row items-center">
 						<h3 class="h2 font-semibold">{project.name}</h3>
 						{#if project.link}
-							<a href={project.link} target="_blank"><Link class="mx-2 w-[1.5rem]" /></a>
+							<a href={project.link} target="_blank" rel="noopener noreferrer" on:click|stopPropagation
+								><Link class="mx-2 w-[1.5rem]" /></a
+							>
 						{/if}
 						{#if project.github}
-							<a href={project.github} target="_blank"
+							<a href={project.github} target="_blank" rel="noopener noreferrer" on:click|stopPropagation
 								><svg
 									class="w-[1.5rem] fill-white mx-2"
 									xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +71,7 @@
 					<div class="flex flex-row items-center">
 						{#each project.skills as index}
 							<div class="flex-none w-[20px] mr-2">
-								<a href="/" class="">
+								<a href="/" class="" on:click|stopPropagation>
 									<img src={skills[index].img} alt={skills[index].name + ' logo'} class="" />
 								</a>
 							</div>
@@ -55,6 +86,13 @@
 			</div>
 		{/each}
 	</div>
+
+	<ProjectDetailsModal
+		project={selectedProject}
+		skills={skills}
+		open={Boolean(selectedProject)}
+		on:close={closeProjectModal}
+	/>
 </div>
 
 <style>
