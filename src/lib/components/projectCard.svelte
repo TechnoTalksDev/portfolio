@@ -43,7 +43,7 @@
 			>
 				<div
 					id="bgimg"
-					class="w-full absolute inset-0 z-[-1] h-[70%] project-hero bg-cover "
+					class="w-full absolute inset-0 z-[-1] h-[70%] project-hero bg-cover"
 					style="background-image: url('{project.img}'); background-position: center center;"
 				></div>
 
@@ -51,12 +51,19 @@
 					<div class="flex flex-row items-center">
 						<h3 class="h2 font-semibold">{project.name}</h3>
 						{#if project.link}
-							<a href={project.link} target="_blank" rel="noopener noreferrer" on:click|stopPropagation
-								><Link class="mx-2 w-[1.5rem]" /></a
+							<a
+								href={project.link}
+								target="_blank"
+								rel="noopener noreferrer"
+								on:click|stopPropagation><Link class="mx-2 w-[1.5rem]" /></a
 							>
 						{/if}
 						{#if project.github}
-							<a href={project.github} target="_blank" rel="noopener noreferrer" on:click|stopPropagation
+							<a
+								href={project.github}
+								target="_blank"
+								rel="noopener noreferrer"
+								on:click|stopPropagation
 								><svg
 									class="w-[1.5rem] fill-white mx-2"
 									xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +96,7 @@
 
 	<ProjectDetailsModal
 		project={selectedProject}
-		skills={skills}
+		{skills}
 		open={Boolean(selectedProject)}
 		on:close={closeProjectModal}
 	/>

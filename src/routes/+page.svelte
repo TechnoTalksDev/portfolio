@@ -181,6 +181,18 @@
 		{ name: 'Flutter', img: '/flutter.svg', skill: 3.2 }
 	];
 
+	/*
+	name: string;
+	img: string;
+	showcaseImgs?: string[];
+	tagline?: string; // meant to show a short stats hit "Innvoation award winner", "150+ commits", "1000+ downloads", etc will be shown in bold above the description
+	shortDescription: string;
+	longDescription?: string;
+	link?: string;
+	github?: string;
+	tags: string[];
+	skills: number[]; // indexes of skills used
+	*/
 	const projects = [
 		{
 			name: '10A VEX',

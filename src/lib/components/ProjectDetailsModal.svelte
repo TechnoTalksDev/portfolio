@@ -1,6 +1,7 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
 	import { Link, X } from 'lucide-svelte';
+	import { fade } from 'svelte/transition';
 
 	/** @type {any | null} */
 	export let project = null;
@@ -52,32 +53,45 @@
 		role="dialog"
 		aria-modal="true"
 		tabindex="0"
+		transition:fade={{ duration: 100 }}
 	>
-		<div class="card variant-glass-surface w-[52rem] max-w-[96vw] max-h-[90vh] overflow-y-auto relative py-4 px-4 sm:px-6">
+		<div
+			class="card variant-glass-surface w-[72rem] max-w-[96vw] max-h-[90vh] overflow-y-auto relative py-4 px-4 sm:px-6"
+		>
 			<button
 				type="button"
-				class="absolute right-3 top-3 p-2 rounded-full hover:bg-white/10"
+				class="absolute z-10 right-5 top-5 p-2 rounded-full hover:bg-white/10 transition-all"
 				on:click={close}
 				aria-label="Close project details"
 			>
-				<X class="w-5 h-5" />
+				<X class="w-7 h-7" color="rgba(255, 255, 255, .5)" />
 			</button>
 
 			<div
-				class="w-full h-[20rem] project-hero bg-cover bg-center rounded-xl"
+				class="w-full h-[50vh] project-hero bg-cover bg-center rounded-xl"
 				style="background-image: url('{project.img}');"
 			></div>
 
-			<div class="text-left mt-6">
+			<div class="text-left -mt-4">
 				<div class="flex flex-row items-center flex-wrap gap-y-2">
 					<h3 class="h2 sm:h1 font-semibold">{project.name}</h3>
 					{#if project.link}
-						<a href={project.link} target="_blank" rel="noopener noreferrer" on:click|stopPropagation>
+						<a
+							href={project.link}
+							target="_blank"
+							rel="noopener noreferrer"
+							on:click|stopPropagation
+						>
 							<Link class="mx-2 w-[1.6rem]" />
 						</a>
 					{/if}
 					{#if project.github}
-						<a href={project.github} target="_blank" rel="noopener noreferrer" on:click|stopPropagation>
+						<a
+							href={project.github}
+							target="_blank"
+							rel="noopener noreferrer"
+							on:click|stopPropagation
+						>
 							<svg
 								class="w-[1.6rem] fill-white mx-2"
 								xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +125,14 @@
 
 <style>
 	.project-hero {
-		--mask: linear-gradient(180deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
+		--mask: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 1),
+			rgba(0, 0, 0, 0.8),
+			rgba(0, 0, 0, 0.6),
+			rgba(0, 0, 0, 0.35),
+			rgba(0, 0, 0, 0)
+		);
 
 		-webkit-mask: var(--mask);
 		mask: var(--mask);
