@@ -274,41 +274,24 @@
 -->
 
 <div class="h-[100vh] w-[100vw] backdrop-blur-3xl overflow-x-hidden scroll-smooth">
-
 	<div
 		id="home"
 		class="container h-[100vh] mx-auto flex flex-row flex-wrap lg:flex-col justify-center items-center z-[1] overflow-x-hidden space"
 	>
+		<div class="grid gap-4 lg:grid-cols-2 lg:grid-rows-2">
+			<div class="relative max-lg:row-start-1">
+				<div class="relative flex h-full flex-col overflow-hidden card variant-glass">1</div>
+			</div>
 
+			<div class="relative max-lg:row-start-2 lg:col-start-1 lg:row-start-2">
+				<div class="relative flex h-full flex-col overflow-hidden card variant-glass">2</div>
+			</div>
 
-      <div class="grid gap-4 lg:grid-cols-2 lg:grid-rows-2">
-
-        <div class="relative max-lg:row-start-1">
-          <div class="relative flex h-full flex-col overflow-hidden card variant-glass">
-            1
-          </div>
-        </div>
-
-        <div class="relative max-lg:row-start-2 lg:col-start-1 lg:row-start-2">
-          <div class="relative flex h-full flex-col overflow-hidden card variant-glass">
-            2
-          </div>
-        </div>
-
-
-        <div class="relative lg:row-span-2">
-
-          <div class="relative flex h-full flex-col overflow-hidden card variant-glass ">
-            3
-          </div>
-
-        </div>
-      </div>
-
-
-  
-  
-  </div>
+			<div class="relative lg:row-span-2">
+				<div class="relative flex h-full flex-col overflow-hidden card variant-glass">3</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <style lang="postcss">

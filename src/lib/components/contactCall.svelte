@@ -11,8 +11,12 @@
 		navbar: [
 			{ label: 'Mail', icon: GmailSvg, href: 'mailto:chandan.chengalvala@gmail.com' },
 			{ label: 'Github', icon: GithubSvg, href: 'https://github.com/TechnoTalksDev' },
-			{ label: 'LinkedInSvg', icon: LinkedInSvg, href: 'https://www.linkedin.com/in/murali-sri-chandan-chengalvala-a31501288/' },
-      { label: 'Discord', icon: DiscordSvg, href: 'https://discord.gg/8vNHAA36fR' },
+			{
+				label: 'LinkedInSvg',
+				icon: LinkedInSvg,
+				href: 'https://www.linkedin.com/in/murali-sri-chandan-chengalvala-a31501288/'
+			},
+			{ label: 'Discord', icon: DiscordSvg, href: 'https://discord.gg/8vNHAA36fR' }
 		]
 	};
 </script>
@@ -34,12 +38,11 @@
 		{#each navs.navbar as item}
 			<DockIcon {mouseX} {magnification} {distance}>
 				<a href={item.href} target="_blank">
-        <div class="hover:bg-zinc-200/20 transition-all duration-200 rounded-full p-2">
-					<img src={item.icon} alt={item.label} class="h-7 w-7" />
-				</div>
-        </a>
+					<div class="hover:bg-zinc-200/20 transition-all duration-200 rounded-full p-2">
+						<img src={item.icon} alt={item.label} class="h-7 w-7" />
+					</div>
+				</a>
 			</DockIcon>
 		{/each}
 	</Dock>
 </div>
-

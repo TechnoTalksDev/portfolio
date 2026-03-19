@@ -131,22 +131,19 @@
 			skill: 4.2
 		},
 		{
-			name: "PocketBase",
-			img: "/pb.svg",
+			name: 'PocketBase',
+			img: '/pb.svg',
 			skill: 4.2
 		},
-		{name: "Flutter",
-			img: "/flutter.svg",
-			skill: 3.2
-		},
-		
+		{ name: 'Flutter', img: '/flutter.svg', skill: 3.2 }
 	];
 
 	const projects = [
 		{
 			name: '10A VEX',
 			img: '/10A.png',
-			description: '<strong>Innovate Award @ State</strong><br/>VEX V5 Robotics programming, implementing various motion algorithms, telemetry systems, localization, and more.',
+			description:
+				'<strong>Innovate Award @ State</strong><br/>VEX V5 Robotics programming, implementing various motion algorithms, telemetry systems, localization, and more.',
 			link: 'https://www.instagram.com/exothermicalpha/',
 			github: 'https://github.com/Exo10A',
 			tags: ['VEX', 'c++'],
@@ -165,7 +162,8 @@
 		{
 			name: 'Simeo',
 			img: '/simeo_full.png',
-			description: '<strong>1.3k+ views per month</strong><br/>GPA and Grade caluculation for Synergy students. With seamless integration with Synergy, and highly customizable calculations.',
+			description:
+				'<strong>1.3k+ views per month</strong><br/>GPA and Grade caluculation for Synergy students. With seamless integration with Synergy, and highly customizable calculations.',
 			link: 'https://www.simeo.app/',
 			github: 'https://github.com/TechnoTalksDev/Simeo',
 			tags: ['FBLA', 'full-stack'],
@@ -174,7 +172,8 @@
 		{
 			name: 'SAHF',
 			img: '/SAHF-banner.png',
-			description: 'South Asian Heart Foundation website, featuring a variety of services, along with a blog.',
+			description:
+				'South Asian Heart Foundation website, featuring a variety of services, along with a blog.',
 			link: 'https://www.sahf.life/',
 			github: 'https://github.com/South-Asian-Heart-Foundation/SAHF-site',
 			tags: ['SvelteKit', 'full-stack', 'Non-profit'],
@@ -183,7 +182,8 @@
 		{
 			name: 'ThePiSchool',
 			img: '/thepischool.png',
-			description: 'Freelance web development client, featuring a tutoring service paired with tastefull design.',
+			description:
+				'Freelance web development client, featuring a tutoring service paired with tastefull design.',
 			link: 'https://thepischools.com/',
 			github: '',
 			tags: ['SvelteKit', 'full-stack', 'Business'],
@@ -192,7 +192,8 @@
 		{
 			name: 'Reko',
 			img: '/reko-banner.png',
-			description: '<strong>150+ commits </strong><br/>Discord bot integration for Minecraft servers. Monitor through panels, charts, and more.',
+			description:
+				'<strong>150+ commits </strong><br/>Discord bot integration for Minecraft servers. Monitor through panels, charts, and more.',
 			link: '',
 			github: 'https://github.com/TechnoTalksDev/Reko',
 			tags: ['Discord', 'API', 'Minecraft', 'Server'],
@@ -201,7 +202,8 @@
 		{
 			name: 'Rider-MC',
 			img: '/rider-banner.png',
-			description: '<strong>1000+ downloads</strong><br/>Ride any Minecraft mob! With a variety of permissions, and customization.',
+			description:
+				'<strong>1000+ downloads</strong><br/>Ride any Minecraft mob! With a variety of permissions, and customization.',
 			link: 'https://www.spigotmc.org/resources/rider-simple-easy-ride-anything-1-8x-1-17x.93807/',
 			github: 'https://github.com/TechnoTalksDev/Rider-MC',
 			tags: ['Minecraft', 'Plugin', 'Java'],
@@ -210,7 +212,8 @@
 		{
 			name: 'CraftableSaddlesMC',
 			img: '/saddle-banner.png',
-			description: '<strong>500+ downloads</strong><br/>Craft saddles for any mob! With a variety of permissions, and customization.',
+			description:
+				'<strong>500+ downloads</strong><br/>Craft saddles for any mob! With a variety of permissions, and customization.',
 			link: 'https://www.spigotmc.org/resources/craftablesaddles-simple-easy-1-8x-1-17x.93871/',
 			github: 'https://github.com/TechnoTalksDev/CraftableSaddlesMC',
 			tags: ['Minecraft', 'Plugin', 'Java'],
@@ -219,7 +222,8 @@
 		{
 			name: 'Reko Link',
 			img: '/reko-banner.png',
-			description: 'Integration server-side for Reko with WebSockets, API, and more. Allowing access to server console, 2 way chat, active roles, and more.',
+			description:
+				'Integration server-side for Reko with WebSockets, API, and more. Allowing access to server console, 2 way chat, active roles, and more.',
 			link: '',
 			github: 'https://github.com/TechnoTalksDev/Reko-Link',
 			tags: ['WebSockets', 'API', 'Minecraft', 'Server'],
@@ -242,10 +246,9 @@
 			github: 'https://github.com/TechnoTalksDev/Spaceboi',
 			tags: ['PyGame', 'Python', 'GameDev'],
 			skills: [3]
-		},
-
+		}
 	];
-	
+
 	/*
 	const experiences = [
 		{
@@ -277,44 +280,47 @@
 	*/
 
 	const experiences = [
-    {
-        date: 'August 2023 - 2025',
-        company: 'Exothermic Alpha',
-        position: 'Lead Developer',
-        blurb: 'Developing motion algorithms and autonomous routines for VEX Robotics, optimizing localization and system performance.',
-				skills: [4, 7, 8]
-    },
-    {
-        date: 'July - August 2024',
-        company: 'Quadrant',
-        position: 'Intern',
-        blurb: 'Led interns as SCRUM master to build a data-driven application for a company pitch, leveraging modern cloud and AI technologies.',
-				skills: [0, 6, 7, 9]
-    },
-    {
-        date: 'August 2024 - Present',
-        company: 'SAHF',
-        position: 'CTO',
-        blurb: 'Oversee technology strategy, develop conversion-driven web solutions, and implement SEO-focused blogs and interactive tools.',
-				skills: [0, 6, 9]
-    },
-    {
-        date: 'Oct. 2024 - 2024',
-        company: 'NC FBLA',
-        position: 'Tech Committee',
-        blurb: 'Maintain NC FBLA’s tech initiatives, develop mobile solutions, and build digital tools for local business partners.',
-				skills: [10]
-    }
-	,
-	{
-		date: '2025 - Present',
-		company: 'STEAMOJI ROBOTICS',
-		position: 'Public Relations',
-		blurb: 'A student-created and led robotics organization. Created a website to inform parents and students of updates, including live feeds of event and award data. Currently used as the primary communication center for all parents and students of the organization.',
-		skills: [0, 1, 8]
-	}
-];
-
+		{
+			date: 'August 2023 - 2025',
+			company: 'Exothermic Alpha',
+			position: 'Lead Developer',
+			blurb:
+				'Developing motion algorithms and autonomous routines for VEX Robotics, optimizing localization and system performance.',
+			skills: [4, 7, 8]
+		},
+		{
+			date: 'July - August 2024',
+			company: 'Quadrant',
+			position: 'Intern',
+			blurb:
+				'Led interns as SCRUM master to build a data-driven application for a company pitch, leveraging modern cloud and AI technologies.',
+			skills: [0, 6, 7, 9]
+		},
+		{
+			date: 'August 2024 - Present',
+			company: 'SAHF',
+			position: 'CTO',
+			blurb:
+				'Oversee technology strategy, develop conversion-driven web solutions, and implement SEO-focused blogs and interactive tools.',
+			skills: [0, 6, 9]
+		},
+		{
+			date: 'Oct. 2024 - 2024',
+			company: 'NC FBLA',
+			position: 'Tech Committee',
+			blurb:
+				'Maintain NC FBLA’s tech initiatives, develop mobile solutions, and build digital tools for local business partners.',
+			skills: [10]
+		},
+		{
+			date: '2025 - Present',
+			company: 'STEAMOJI ROBOTICS',
+			position: 'Public Relations',
+			blurb:
+				'A student-created and led robotics organization. Created a website to inform parents and students of updates, including live feeds of event and award data. Currently used as the primary communication center for all parents and students of the organization.',
+			skills: [0, 1, 8]
+		}
+	];
 
 	const featuredProject = {
 		name: 'Simeo',
@@ -343,7 +349,6 @@
 <div
 	id="m-blob"
 	class="absolute top-[-6rem] left-0 right-0 ml-auto mr-auto w-[10rem] h-[8rem] rounded-[50%] bg-gradient-to-br from-surface-500 via-primary-500 to-white opacity-40 overflow-x-hidden"
-	
 ></div>
 
 <!--
@@ -352,52 +357,64 @@
 -->
 
 <div class="h-[100vh] w-[100vw] backdrop-blur-3xl overflow-x-hidden scroll-smooth">
-	<div id="hey" class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
-		
-		
-		
+	<div
+		id="hey"
+		class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden"
+	>
 		<div class="h-full text-center flex flex-col items-center justify-center">
-
 			<IntroCard />
 			<span class="my-1.5"></span>
-			<SkillsSliderHorizontal skills={skills} />
+			<SkillsSliderHorizontal {skills} />
 		</div>
-		
+
 		<!--arrow-->
 		<div class="flex-end">
-			<div class="flex justify-center items-center w-[50px] h-[50px] rounded-full variant-soft-primary animate-bounce">
-				<a href="#experience"><ArrowDown size="30" strokeWidth=2.5/></a>
+			<div
+				class="flex justify-center items-center w-[50px] h-[50px] rounded-full variant-soft-primary animate-bounce"
+			>
+				<a href="#experience"><ArrowDown size="30" strokeWidth="2.5" /></a>
 			</div>
-			<div id="b-blob" class="absolute bottom-[0rem] left-0 right-0 ml-auto mr-auto w-[5rem] h-[5rem] rounded-[50%] bg-gradient-to-br from-surface-500 via-primary-500 to-white opacity-40 overflow-x-hidden -z-10 blur-3xl">
-			</div>
+			<div
+				id="b-blob"
+				class="absolute bottom-[0rem] left-0 right-0 ml-auto mr-auto w-[5rem] h-[5rem] rounded-[50%] bg-gradient-to-br from-surface-500 via-primary-500 to-white opacity-40 overflow-x-hidden -z-10 blur-3xl"
+			></div>
 		</div>
-
 	</div>
 
-	<div id="experience" class="container min-h-[100vh] h-fit w-fit mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
-		<div class="h-full flex flex-col col-span-2 flex-wrap items-center justify-center my-8 ">	
-			<NewExperience	experiences={experiences} skills={skills}/>
+	<div
+		id="experience"
+		class="container min-h-[100vh] h-fit w-fit mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden"
+	>
+		<div class="h-full flex flex-col col-span-2 flex-wrap items-center justify-center my-8">
+			<NewExperience {experiences} {skills} />
 		</div>
 		<!--arrow-->
 		<div class="flex-end">
-			<div class="flex justify-center items-center w-[50px] h-[50px] rounded-full variant-soft-primary animate-bounce">
-				<a href="#projects"><ArrowDown size="30" strokeWidth=2.5/></a>
+			<div
+				class="flex justify-center items-center w-[50px] h-[50px] rounded-full variant-soft-primary animate-bounce"
+			>
+				<a href="#projects"><ArrowDown size="30" strokeWidth="2.5" /></a>
 			</div>
-			<div id="b-blob" class="absolute bottom-[0rem] left-0 right-0 ml-auto mr-auto w-[5rem] h-[5rem] rounded-[50%] bg-gradient-to-br from-surface-500 via-primary-500 to-white opacity-40 overflow-x-hidden -z-10 blur-3xl">
-			</div>
+			<div
+				id="b-blob"
+				class="absolute bottom-[0rem] left-0 right-0 ml-auto mr-auto w-[5rem] h-[5rem] rounded-[50%] bg-gradient-to-br from-surface-500 via-primary-500 to-white opacity-40 overflow-x-hidden -z-10 blur-3xl"
+			></div>
 		</div>
 	</div>
 
-
-	<div id="projects" class="container min-h-[100vh] h-fit w-fit mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
-		<div class="h-full flex flex-col items-center justify-center my-8">	
-			<ProjectCard projects={projects} skills={skills} />
+	<div
+		id="projects"
+		class="container min-h-[100vh] h-fit w-fit mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden"
+	>
+		<div class="h-full flex flex-col items-center justify-center my-8">
+			<ProjectCard {projects} {skills} />
 		</div>
 	</div>
 
-
-	<div id="contact" class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
-		
+	<div
+		id="contact"
+		class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden"
+	>
 		<ContactCall />
 	</div>
 
@@ -484,7 +501,6 @@
 	</div>
 	-->
 
-
 	<!--
 	<div id="contact" class="container h-[100vh] mx-auto flex justify-center items-center z-[1] overflow-x-hidden">
 		<div class="space-y-10 text-center flex flex-col items-center">
@@ -527,10 +543,6 @@
 			@apply bg-primary-500;
 		}
 	}
-
-
-
-
 
 	@keyframes scroll {
 		0% {

@@ -31,64 +31,63 @@
 	let sections = ['hey', 'experience', 'projects', 'contact'];
 	let currentSection = sections[0];
 </script>
+
 <Unami />
-<Toast position="br" padding="p-3"/>
+<Toast position="br" padding="p-3" />
 <!-- App Shell -->
 <AppShell>
-
-	
-	<div class = "absolute left-0 right-0 mt-2 ml-auto mr-auto flex flex-col items-center z-[2] w-fit">
-			<Dock
-		direction="middle"
-		class="card border-1 border-zinc-100/10 variant-glass w-full"
-		let:mouseX
-		let:distance
-		let:magnification
-	>
-
+	<div class="absolute left-0 right-0 mt-2 ml-auto mr-auto flex flex-col items-center z-[2] w-fit">
+		<Dock
+			direction="middle"
+			class="card border-1 border-zinc-100/10 variant-glass w-full"
+			let:mouseX
+			let:distance
+			let:magnification
+		>
 			<DockIcon mode="text" {mouseX} {magnification} {distance}>
-			<a
-				class="btn btn-sm drop-shadow-xl text-lg whitespace-nowrap hover:underline {currentSection === 'hey' ? 'gradient-heading animate-gradient' : ''}" 
-				href="#hey"
-				rel="noreferrer"
-			>
-				hey
-			</a>
+				<a
+					class="btn btn-sm drop-shadow-xl text-lg whitespace-nowrap hover:underline {currentSection ===
+					'hey'
+						? 'gradient-heading animate-gradient'
+						: ''}"
+					href="#hey"
+					rel="noreferrer"
+				>
+					hey
+				</a>
 			</DockIcon>
 
 			<DockIcon mode="text" {mouseX} {magnification} {distance}>
-										<a
-				class="btn btn-sm drop-shadow-xl mx-1 text-lg whitespace-nowrap"
-				href="#experience"
-				rel="noreferrer"
-			>
-				experience
-			</a>
+				<a
+					class="btn btn-sm drop-shadow-xl mx-1 text-lg whitespace-nowrap"
+					href="#experience"
+					rel="noreferrer"
+				>
+					experience
+				</a>
 			</DockIcon>
 
 			<DockIcon mode="text" {mouseX} {magnification} {distance}>
-							<a
-				class="btn btn-sm  drop-shadow-xl mx-1 text-lg whitespace-nowrap"
-				href="#projects"
-				rel="noreferrer"
-			>
-				projects
-			</a>
+				<a
+					class="btn btn-sm drop-shadow-xl mx-1 text-lg whitespace-nowrap"
+					href="#projects"
+					rel="noreferrer"
+				>
+					projects
+				</a>
 			</DockIcon>
 
 			<DockIcon mode="text" {mouseX} {magnification} {distance}>
-							<a
-				class="btn btn-sm  drop-shadow-xl text-lg whitespace-nowrap"
-				href="#contact"
-				rel="noreferrer"
-			>
-				contact
-			</a>
+				<a
+					class="btn btn-sm drop-shadow-xl text-lg whitespace-nowrap"
+					href="#contact"
+					rel="noreferrer"
+				>
+					contact
+				</a>
 			</DockIcon>
+		</Dock>
 
-	</Dock>
-		
-		
 		<!-- <div class="flex flex-row ">
 			<a
 				class="btn btn-sm drop-shadow-xl text-lg"
@@ -120,12 +119,10 @@
 			</a>
 		</div> -->
 	</div>
-	
+
 	<!-- Page Route Content -->
 	<slot />
 </AppShell>
 
-
 <style>
-
 </style>
