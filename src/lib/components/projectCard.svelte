@@ -35,11 +35,12 @@
 	<div class="flex flex-row flex-wrap gap-2 justify-center w-fit max-w-[90vw]">
 		{#each projects as project}
 			<div
-				class="card card-hover variant-glass-surface w-[25rem] max-w-[85vw] h-fit py-2 relative overflow-hidden cursor-pointer"
+				class="card card-hover w-[25rem] max-w-[85vw] h-fit py-2 relative overflow-hidden cursor-pointer"
 				on:click={() => openProjectModal(project)}
 				on:keydown={(event) => handleCardKeydown(event, project)}
 				role="button"
 				tabindex="0"
+				style="background-color: transparent;"
 			>
 				<div
 					id="bgimg"

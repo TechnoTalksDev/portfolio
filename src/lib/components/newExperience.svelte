@@ -12,7 +12,8 @@
 	<div class="flex flex-row flex-wrap gap-6 justify-center w-fit max-w-[56rem]">
 		{#each experiences as experience, index}
 			<div
-				class="card card-hover variant-glass-surface p-4 relative flex flex-row items-center w-[25rem] max-w-[85vw] max-h-[15rem]"
+				class="card card-hover p-4 relative flex flex-row items-center w-[25rem] max-w-[85vw] max-h-[15rem]"
+				style="background-color: transparent;"
 			>
 				<!-- 
         <div class="w-[70%]">
