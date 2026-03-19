@@ -25,11 +25,11 @@
 
 	import { initializeStores, Toast } from '@skeletonlabs/skeleton';
 	import Unami from '$lib/components/unami.svelte';
+	import { currentSection } from '$lib/stores/sectionStore';
 
 	initializeStores();
 
-	let sections = ['hey', 'experience', 'projects', 'contact'];
-	let currentSection = sections[0];
+	$: console.log('Current Section:', $currentSection);
 </script>
 
 <Unami />
@@ -46,7 +46,7 @@
 		>
 			<DockIcon mode="text" {mouseX} {magnification} {distance}>
 				<a
-					class="btn btn-sm drop-shadow-xl text-lg whitespace-nowrap hover:underline {currentSection ===
+					class="btn btn-sm drop-shadow-xl text-lg whitespace-nowrap hover:underline {$currentSection ===
 					'hey'
 						? 'gradient-heading animate-gradient'
 						: ''}"
@@ -59,7 +59,10 @@
 
 			<DockIcon mode="text" {mouseX} {magnification} {distance}>
 				<a
-					class="btn btn-sm drop-shadow-xl mx-1 text-lg whitespace-nowrap"
+					class="btn btn-sm drop-shadow-xl mx-1 text-lg whitespace-nowrap {$currentSection ===
+					'experience'
+						? 'gradient-heading animate-gradient'
+						: ''}"
 					href="#experience"
 					rel="noreferrer"
 				>
@@ -69,7 +72,10 @@
 
 			<DockIcon mode="text" {mouseX} {magnification} {distance}>
 				<a
-					class="btn btn-sm drop-shadow-xl mx-1 text-lg whitespace-nowrap"
+					class="btn btn-sm drop-shadow-xl mx-1 text-lg whitespace-nowrap {$currentSection ===
+					'projects'
+						? 'gradient-heading animate-gradient'
+						: ''}"
 					href="#projects"
 					rel="noreferrer"
 				>
@@ -79,7 +85,9 @@
 
 			<DockIcon mode="text" {mouseX} {magnification} {distance}>
 				<a
-					class="btn btn-sm drop-shadow-xl text-lg whitespace-nowrap"
+					class="btn btn-sm drop-shadow-xl text-lg whitespace-nowrap {$currentSection === 'contact'
+						? 'gradient-heading animate-gradient'
+						: ''}"
 					href="#contact"
 					rel="noreferrer"
 				>

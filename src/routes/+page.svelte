@@ -15,6 +15,7 @@
 	import SkillsSliderHorizontal from '$lib/components/skillsSliderHorizontal.svelte';
 	import NewExperience from '$lib/components/newExperience.svelte';
 	import ContactCall from '$lib/components/contactCall.svelte';
+	import { currentSection } from '$lib/stores/sectionStore';
 	const toastStore = getToastStore();
 
 	let currentSub = 0;
@@ -65,12 +66,54 @@
 	onMount(() => {
 		typeSub();
 
+		// Setup Intersection Observer for section tracking
+		const sections = ['hey', 'experience', 'projects', 'contact'];
+		const sectionElements = sections.map((id) => document.getElementById(id));
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				let maxIntersectionRatio = 0;
+				let largestSection: string | null = null;
+
+				entries.forEach((entry) => {
+					const id = (entry.target as HTMLElement).id;
+					const ratio = entry.intersectionRatio;
+
+					console.log(
+						`[${id}] intersectionRatio: ${(ratio * 100).toFixed(1)}%, isIntersecting: ${entry.isIntersecting}`
+					);
+
+					if (entry.isIntersecting && ratio > maxIntersectionRatio) {
+						maxIntersectionRatio = ratio;
+						largestSection = id;
+					}
+				});
+
+				console.log(
+					`Largest section: ${largestSection} (${(maxIntersectionRatio * 100).toFixed(1)}%)\n`
+				);
+
+				// Only update if the section has at least 50% visibility
+				if (maxIntersectionRatio >= 0.5 && largestSection) {
+					currentSection.set(largestSection);
+				}
+			},
+			{ threshold: [0, 0.5, 1.0] }
+		);
+
+		sectionElements.forEach((el) => {
+			if (el) observer.observe(el);
+		});
+
 		const timer = setTimeout(() => {
 			//console.log("User has been on site for: "+longWhile+ " s");
 			toastStore.trigger(comingSoon);
 		}, longWhile);
 
-		return () => clearTimeout(timer);
+		return () => {
+			observer.disconnect();
+			clearTimeout(timer);
+		};
 	});
 
 	const mailList: ToastSettings = {
