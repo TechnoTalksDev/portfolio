@@ -130,55 +130,55 @@
 	const skills = [
 		{
 			name: 'SvelteKit',
-			img: '/svelte.png',
+			img: '/skills/svelte.png',
 			skill: 4.4
 		},
 		{
 			name: 'TypeScript',
-			img: '/typescript.png',
+			img: '/skills/typescript.png',
 			skill: 3.8
 		},
 		{
 			name: 'MongoDB',
-			img: '/mongo.png',
+			img: '/skills/mongo.png',
 			skill: 2.8
 		},
 		{
 			name: 'Python',
-			img: '/python.png',
+			img: '/skills/python.png',
 			skill: 3.6
 		},
 		{
 			name: 'C++',
-			img: '/cplusplus.png',
+			img: '/skills/cplusplus.png',
 			skill: 2.6
 		},
 		{
 			name: 'Kotlin',
-			img: '/kotlin.png',
+			img: '/skills/kotlin.png',
 			skill: 2.5
 		},
 		{
 			name: 'Azure',
-			img: '/azure.png',
+			img: '/skills/azure.png',
 			skill: 3.6
 		},
 		{
 			name: 'Docker',
-			img: '/docker.png',
+			img: '/skills/docker.png',
 			skill: 4.2
 		},
 		{
 			name: 'VEX',
-			img: '/vex.png',
+			img: '/skills/vex.png',
 			skill: 4.2
 		},
 		{
 			name: 'PocketBase',
-			img: '/pb.svg',
+			img: '/skills/pb.svg',
 			skill: 4.2
 		},
-		{ name: 'Flutter', img: '/flutter.svg', skill: 3.2 }
+		{ name: 'Flutter', img: 'skills/flutter.svg', skill: 3.2 }
 	];
 
 	/*
@@ -194,29 +194,19 @@
 	skills: number[]; // indexes of skills used
 	*/
 	const projects = [
-		{
-			name: '10A VEX',
-			img: '/10A.png',
-			description:
-				'<strong>Innovate Award @ State</strong><br/>VEX V5 Robotics programming, implementing various motion algorithms, telemetry systems, localization, and more.',
-			link: 'https://www.instagram.com/exothermicalpha/',
-			github: 'https://github.com/Exo10A',
-			tags: ['VEX', 'c++'],
-			skills: [8, 4, 3, 7]
-		},
-		/*
-		{
-			name: "Retrospective",
-			img: "https://fastrepair.biz/wp-content/uploads/2018/10/iStock-984996502-3.jpg",
-			description: "Built by students for students",
-			link: "",
-			github: "",
-			tags: ["startup"]
-		},
-		*/
+		// {
+		// 	name: '10A VEX',
+		// 	img: '/10A.png',
+		// 	description:
+		// 		'<strong>Innovate Award @ State</strong><br/>VEX V5 Robotics programming, implementing various motion algorithms, telemetry systems, localization, and more.',
+		// 	link: 'https://www.instagram.com/exothermicalpha/',
+		// 	github: 'https://github.com/Exo10A',
+		// 	tags: ['VEX', 'c++'],
+		// 	skills: [8, 4, 3, 7]
+		// },
 		{
 			name: 'Simeo',
-			img: '/simeo_full.png',
+			img: '/projects/simeo/simeo_full.png',
 			description:
 				'<strong>1.3k+ views per month</strong><br/>GPA and Grade caluculation for Synergy students. With seamless integration with Synergy, and highly customizable calculations.',
 			link: 'https://www.simeo.app/',
@@ -225,18 +215,8 @@
 			skills: [0, 1, 2, 6]
 		},
 		{
-			name: 'SAHF',
-			img: '/SAHF-banner.png',
-			description:
-				'South Asian Heart Foundation website, featuring a variety of services, along with a blog.',
-			link: 'https://www.sahf.life/',
-			github: 'https://github.com/South-Asian-Heart-Foundation/SAHF-site',
-			tags: ['SvelteKit', 'full-stack', 'Non-profit'],
-			skills: [0, 1, 9, 6]
-		},
-		{
 			name: 'ThePiSchool',
-			img: '/thepischool.png',
+			img: '/projects/thepischool/thepischool.png',
 			description:
 				'Freelance web development client, featuring a tutoring service paired with tastefull design.',
 			link: 'https://thepischools.com/',
@@ -246,7 +226,7 @@
 		},
 		{
 			name: 'Reko',
-			img: '/reko-banner.png',
+			img: '/projects/reko/reko-banner.png',
 			description:
 				'<strong>150+ commits </strong><br/>Discord bot integration for Minecraft servers. Monitor through panels, charts, and more.',
 			link: '',
@@ -256,51 +236,13 @@
 		},
 		{
 			name: 'Rider-MC',
-			img: '/rider-banner.png',
+			img: '/projects/rider-mc/rider-banner.png',
 			description:
 				'<strong>1000+ downloads</strong><br/>Ride any Minecraft mob! With a variety of permissions, and customization.',
 			link: 'https://www.spigotmc.org/resources/rider-simple-easy-ride-anything-1-8x-1-17x.93807/',
 			github: 'https://github.com/TechnoTalksDev/Rider-MC',
 			tags: ['Minecraft', 'Plugin', 'Java'],
 			skills: [5]
-		},
-		{
-			name: 'CraftableSaddlesMC',
-			img: '/saddle-banner.png',
-			description:
-				'<strong>500+ downloads</strong><br/>Craft saddles for any mob! With a variety of permissions, and customization.',
-			link: 'https://www.spigotmc.org/resources/craftablesaddles-simple-easy-1-8x-1-17x.93871/',
-			github: 'https://github.com/TechnoTalksDev/CraftableSaddlesMC',
-			tags: ['Minecraft', 'Plugin', 'Java'],
-			skills: [5]
-		},
-		{
-			name: 'Reko Link',
-			img: '/reko-banner.png',
-			description:
-				'Integration server-side for Reko with WebSockets, API, and more. Allowing access to server console, 2 way chat, active roles, and more.',
-			link: '',
-			github: 'https://github.com/TechnoTalksDev/Reko-Link',
-			tags: ['WebSockets', 'API', 'Minecraft', 'Server'],
-			skills: [5, 3]
-		},
-		{
-			name: 'HotDash',
-			img: '/hot-dash.png',
-			description: 'Simple dashboard for host temperatures and load',
-			link: '',
-			github: 'https://github.com/TechnoTalksDev/HotDash',
-			tags: ['Server', 'Docker'],
-			skills: [0, 1]
-		},
-		{
-			name: 'Spaceboi',
-			img: '/spaceboi.png',
-			description: 'Pilot and fight in 2D! Built with pygame, and python.',
-			link: '',
-			github: 'https://github.com/TechnoTalksDev/Spaceboi',
-			tags: ['PyGame', 'Python', 'GameDev'],
-			skills: [3]
 		}
 	];
 
