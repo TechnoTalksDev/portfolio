@@ -92,15 +92,15 @@
 					<p class="font-normal mt-4">{@html project.description}</p>
 				</div>
 			</div>
+
+			<ProjectDetailsModal
+				{project}
+				{skills}
+				visible={selectedProject === project}
+				on:close={closeProjectModal}
+			/>
 		{/each}
 	</div>
-
-	<ProjectDetailsModal
-		project={selectedProject}
-		{skills}
-		open={Boolean(selectedProject)}
-		on:close={closeProjectModal}
-	/>
 </div>
 
 <style>
