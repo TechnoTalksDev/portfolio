@@ -68,10 +68,12 @@
 			<X class="w-7 h-7" color="rgba(255, 255, 255, .5)" />
 		</button>
 
-		<div
-			class="w-full h-[50vh] project-hero bg-cover bg-center rounded-xl"
-			style="background-image: url('{project.img}');"
-		></div>
+		<a href={project.link ?? project.github} target="_blank">
+      <div
+        class="w-full h-[50vh] project-hero bg-cover bg-center rounded-xl"
+        style="background-image: url('{project.img}');"
+      ></div>
+    </a>
 
 		<div class="text-left -mt-4">
 			<div class="flex flex-row items-center flex-wrap gap-y-2">
@@ -100,20 +102,27 @@
 				{/if}
 			</div>
 
-			<div class="flex flex-row flex-wrap items-center mt-3">
-				{#each project.skills as index}
-					{#if skills[index]}
-						<div class="flex-none w-[24px] mr-3">
-							<img src={skills[index].img} alt={skills[index].name + ' logo'} />
-						</div>
-					{/if}
-				{/each}
-				{#each project.tags as tag}
-					<span class="text-md mr-2 text-primary-400">#{tag}</span>
-				{/each}
+			<div class="flex flex-row flex-wrap items-center justify-between mt-1">
+				<div class="flex flex-row justify-center items-center">
+          {#each project.skills as index}
+            {#if skills[index]}
+              <div class="flex-none w-[24px] mr-3">
+                <img src={skills[index].img} alt={skills[index].name + ' logo'} />
+              </div>
+            {/if}
+          {/each}
+        </div>
+				<div>
+          {#each project.tags as tag}
+            <span class="text-xl mr-2 text-primary-400">#{tag}</span>
+          {/each}
+        </div>
 			</div>
+      					{#if project.tagline}
+						<p class="font-bold mt-1">{@html project.tagline}</p>
+					{/if}
 
-			<p class="font-normal mt-5 text-lg">{@html project.description}</p>
+			<p class="font-normal mt-5 text-lg">{@html project.longDescription}</p>
 		</div>
 	</div>
 </div>
@@ -123,8 +132,8 @@
 		--mask: linear-gradient(
 			180deg,
 			rgba(0, 0, 0, 1),
-			rgba(0, 0, 0, 0.8),
-			rgba(0, 0, 0, 0.6),
+			rgba(0, 0, 0, 1),
+			rgba(0, 0, 0, 0.9),
 			rgba(0, 0, 0, 0.35),
 			rgba(0, 0, 0, 0)
 		);

@@ -1,26 +1,22 @@
-<script>
+<script lang="ts">
 	import { Link } from 'lucide-svelte';
 	import ProjectDetailsModal from './ProjectDetailsModal.svelte';
+	import type { Project, Skill } from '$lib/types';
 
-	/** @type {any[]} */
-	export let projects = [];
-	/** @type {any[]} */
-	export let skills = [];
+	export let projects: Project[] = [];
+	export let skills: Skill[] = [];
 
-	/** @type {any | null} */
-	let selectedProject = null;
+	let selectedProject: Project | null = null;
 
-	/** @param {any} project */
-	const openProjectModal = (project) => {
+	const openProjectModal = (project: Project): void => {
 		selectedProject = project;
 	};
 
-	const closeProjectModal = () => {
+	const closeProjectModal = (): void => {
 		selectedProject = null;
 	};
 
-	/** @param {KeyboardEvent} event @param {any} project */
-	const handleCardKeydown = (event, project) => {
+	const handleCardKeydown = (event: KeyboardEvent, project: Project): void => {
 		if (event.key === 'Enter' || event.key === ' ') {
 			event.preventDefault();
 			openProjectModal(project);
@@ -88,8 +84,11 @@
 							<span class="text-md mr-1 text-primary-400">#{tag}</span>
 						{/each}
 					</div>
+					{#if project.tagline}
+						<p class="font-bold mt-1">{@html project.tagline}</p>
+					{/if}
 
-					<p class="font-normal mt-4">{@html project.description}</p>
+					<p class="font-normal mt-4">{@html project.shortDescription}</p>
 				</div>
 			</div>
 
@@ -105,7 +104,14 @@
 
 <style>
 	.project-hero {
-		--mask: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+		--mask: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 1),
+			rgba(0, 0, 0, 0.8),
+			rgba(0, 0, 0, 0.6),
+			rgba(0, 0, 0, 0.35),
+			rgba(0, 0, 0, 0)
+		);
 
 		-webkit-mask: var(--mask);
 		mask: var(--mask);

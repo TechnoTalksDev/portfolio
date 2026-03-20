@@ -32,7 +32,7 @@
 					</div>
 				</div>
 
-				<div class="card p-1.5 variant-soft-primary" data-popup="popupHover-{index}">
+				<div class="card p-1.5 variant-soft-primary z-10 " data-popup="popupHover-{index}">
 					<p class="font-bold">{skill.name}</p>
 					<div class="arrow variant-soft-primary" />
 				</div>

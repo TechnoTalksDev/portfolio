@@ -44,7 +44,7 @@
 		>
 			<DockIcon mode="text" {mouseX} {magnification} {distance}>
 				<a
-					class="btn btn-sm drop-shadow-xl text-lg whitespace-nowrap hover:underline  {$currentSection ===
+					class="btn btn-sm text-shadow-md drop-shadow-xl text-lg whitespace-nowrap hover:underline  {$currentSection ===
 					'hey'
 						? 'gradient-heading animate-gradient'
 						: ''}"
@@ -57,7 +57,7 @@
 
 			<DockIcon mode="text" {mouseX} {magnification} {distance}>
 				<a
-					class="btn btn-sm drop-shadow-xl mx-1 text-lg whitespace-nowrap {$currentSection ===
+					class="btn btn-sm text-shadow-md drop-shadow-xl mx-1 text-lg whitespace-nowrap {$currentSection ===
 					'experience'
 						? 'gradient-heading animate-gradient'
 						: ''}"
@@ -70,7 +70,7 @@
 
 			<DockIcon mode="text" {mouseX} {magnification} {distance}>
 				<a
-					class="btn btn-sm drop-shadow-xl mx-1 text-lg whitespace-nowrap {$currentSection ===
+					class="btn btn-sm text-shadow-md drop-shadow-xl mx-1 text-lg whitespace-nowrap {$currentSection ===
 					'projects'
 						? 'gradient-heading animate-gradient'
 						: ''}"
@@ -83,7 +83,7 @@
 
 			<DockIcon mode="text" {mouseX} {magnification} {distance}>
 				<a
-					class="btn btn-sm drop-shadow-xl text-lg whitespace-nowrap {$currentSection === 'contact'
+					class="btn btn-sm text-shadow-md drop-shadow-xl text-lg whitespace-nowrap {$currentSection === 'contact'
 						? 'gradient-heading animate-gradient'
 						: ''}"
 					href="#contact"
