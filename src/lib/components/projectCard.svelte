@@ -38,6 +38,13 @@
 				tabindex="0"
 				style="background-color: transparent;"
 			>
+				<div class="absolute top-4 right-4 z-10 flex flex-row items-center justify-center gap-2">
+					{#if project.active}
+						<!-- <span class="text-sm font-bold ">Active</span> -->
+						<div class="w-2 h-2 rounded-full animate-ping bg-green-500"></div>
+					{/if}
+
+				</div>
 				<div
 					id="bgimg"
 					class="w-full absolute inset-0 z-[-1] h-[70%] project-hero bg-cover"
@@ -88,7 +95,7 @@
 						<p class="font-bold mt-1">{@html project.tagline}</p>
 					{/if}
 
-					<p class="font-normal mt-4">{@html project.shortDescription}</p>
+					<p class="font-medium mt-4">{@html project.shortDescription}</p>
 				</div>
 			</div>
 

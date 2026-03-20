@@ -180,9 +180,12 @@
 			skill: 4.2
 		},
 		{ name: 'Flutter', img: 'skills/flutter.svg', skill: 3.2 },
-		{ name: "React", img: 'skills/react.png', skill: 3.0 },
-		{name: "Firebase", img: '/skills/firebase.png', skill: 3.0},
-		{name: "Supabase", img: '/skills/supabase.webp', skill: 3.0},
+		{ name: 'React', img: 'skills/react.png', skill: 3.0 },
+		{ name: 'Firebase', img: '/skills/firebase.png', skill: 3.0 },
+		{ name: 'Supabase', img: '/skills/supabase.webp', skill: 3.0 },
+		{ name: 'Apple AppStore', img: '/skills/appstore.png', skill: 3.0 },
+		{ name: 'n8n', img: '/skills/n8n.png', skill: 3.0 },
+		{ name: 'Redis', img: '/skills/redis.png', skill: 3.0 }
 	];
 
 	const projects: Project[] = [
@@ -197,146 +200,160 @@
 		// 	skills: [8, 4, 3, 7]
 		// },
 		{
-			name: 'buildpublic',
-			img: '/projects/buildpublic/buildpublic.png',
+			name: 'Simeo',
+			img: '/projects/simeo/simeo_full.png',
 			showcaseImgs: [],
-			shortDescription: 'SvelteKit UI demo showcasing clean dashboard patterns for startups and creators to transparently share progress and build community accountability.',
+			tagline:
+				'Top 5 @ National Conference Future Business Leaders of America <br/>500+ active users',
+			shortDescription:
+				'The most powerful and intuitive grade calculator for StudentVue students with live editing, visual breakdowns, weighted GPA tracking, and AI-powered study insights.',
 			longDescription:
-				'A beautiful SvelteKit demo showcasing what a "build in public" dashboard looks like. Perfect for startups, creators, and clubs who want to share their progress transparently with their audience.<br/><br/>This project is all about <strong>clean UI patterns</strong>—landing pages, dashboard layouts, cards, and sections that make <strong>progress updates feel natural and engaging</strong>. Think of it as a template for anyone wanting to build accountability into their public journey.',
-			link: 'https://www.buildpublic.app/',
-			github: 'https://github.com/TechnoTalksDev/buildpublic',
-			tags: ['SvelteKit', 'UI/UX', 'Full Stack'],
-			skills: [0, 1]
+				'Simeo was a <strong>6-month journey</strong> of learning full-stack web technologies while building a production-ready application. I had to master <strong>JWT authentication, database security, and server-side rendering performance</strong> optimizations. Starting with close friends as testers, it expanded to my entire school, eventually becoming a tool hundreds of students across the nation relied on for grade calculation. As my first public product, it was a milestone—though no longer operational due to legal and uptime considerations, it remains an incredible learning experience.<br/><br/>The app itself combines powerful features with beautiful simplicity: <strong>live grade editing</strong> lets you add future assignments and see exactly how your grade changes. <strong>Visual breakdowns</strong instantly show how each category contributes to your final grade. Support for both weighted and unweighted GPAs across multiple years keeps your academic history organized. The <strong>AI-powered tutor</strong> provides study tips and resources for specific assignments. All without ever storing your StudentVue credentials.',
+			link: 'https://www.simeo.app/',
+			github: 'https://github.com/TechnoTalksDev/Simeo',
+			tags: ['FBLA', 'full-stack'],
+			skills: [0, 1, 2, 6],
+			active: true
 		},
 		{
 			name: 'Crusyn',
 			img: '/projects/crusyn/crusyn-website.png',
 			showcaseImgs: [],
-			tagline: "100+ TestFlight signups in 2 weeks",
-			shortDescription: 'Conversion-focused SvelteKit marketing site for a real-world driving game with TestFlight beta signups and PocketBase-backed waitlist integration.',
+			tagline: '100+ TestFlight signups in 2 weeks',
+			shortDescription:
+				'Real-world driving game that turns your city into an open-world playground with map-based challenges, live scoring, leaderboards, and shareable run results.',
 			longDescription:
-				'The promotional hub for Crusyn—a driving game that gets people off their phones and meeting IRL. This SvelteKit site handles the <strong>whole funnel</strong>: hero messaging, TestFlight signups, and waitlist capture via PocketBase.<br/><br/>On the backend, it\'s wired up with PostHog analytics to track conversion events. The site showcases game screenshots, sets expectations, and drives users toward beta access. Clean, focused, and <strong>optimized for conversion</strong>.',
+				'Crusyn started as an idea I wanted to test from the ground up, then grew into a real startup and a live product journey toward the App Store. I built it because I genuinely loved the feeling of playing it myself: <strong>that feeling behind the wheel is not gone</strong>.<br/><br/>The app turns your city into a real-world game. You explore an open-world map, discover challenges, and launch location-based experiences that get you off your phone and into your surroundings. In <strong>Blind Rally</strong> (available now), you memorize a route and drive it back without GPS, then get scored in real time on accuracy, speed, and decisions. <strong>Cruises</strong> (coming soon) adds freeroam drive tracking, XP progression, and skill-based scoring.<br/><br/>Every session builds your profile: review detailed run stats, compare performance over time, climb public leaderboards, compete with friends, and share custom stat cards with your driving archetype. Right now we are running a <strong>TestFlight beta</strong> and actively bringing on new drivers and testers through social media as we prepare for full App Store release. I had so much fun building and playing Crusyn, and I want to share that experience with the world.',
 			link: 'https://crusyn.app',
 			github: 'https://github.com/TechnoTalksDev/crusyn-website',
-			tags: ['SvelteKit', 'Marketing', 'Full Stack'],
-			skills: [0, 1, 9]
-		},
-		{
-			name: 'Flow',
-			img: '',
-			showcaseImgs: [],
-			//tagline: 'Implements Parkinson\'s Law for task efficiency.',
-			shortDescription: 'Gamified productivity app using intentional time pressure and XP rewards to keep tasks focused, featuring grace periods and real-time progress tracking.',
-			longDescription:
-				'Built on the insight that <strong>work expands to fill available time</strong>. Flow uses intentional time pressure and gamification to keep you focused and productive.<br/><br/>Features include time-boxed task sessions, real-time XP rewards based on time spent, performance tracking with completion stats, and a clean distraction-free focus interface. The <strong>grace period system</strong> balances challenge with fairness—you get a minute to wrap up before auto-fail.<br/><br/>Targeted at Gen Z/Gen Alpha, with built-in achievements and streak systems ready to go. Designed to make productivity feel like a game, not a chore.',
-			link: 'https://flow.technotalks.net/',
-			github: 'https://github.com/TechnoTalksDev/flow',
-			tags: ['SvelteKit', 'Productivity', 'Gamification'],
-			skills: [0, 1, 9]
-		},
-		{
-			name: 'Liquid Glass',
-			img: '/projects/liquid-glass/liquid-glass.png',
-			showcaseImgs: [],
-			shortDescription: 'Recreation of iOS glass morphism media player powered by live Spotify data, built with SvelteKit and n8n backend for real-time sync.',
-			longDescription:
-				'A recreation of the <strong>iOS glass morphism media player</strong> effect, powered by real-time Spotify data. Built in a day as an experimental push on what\'s possible with web glass effects.<br/><br/>The frontend is pure SvelteKit and Tailwind, while the backend uses an n8n workflow to handle Spotify OAuth and cache responses in Redis for efficiency. Updates every ~5 seconds to show live track info, album art, and playback progress.<br/><br/>Best on Chrome-based browsers due to advanced CSS effects. The looping background video complements the aesthetic perfectly.',
-			link: 'https://glass.chandanc.me/',
-			github: 'https://github.com/TechnoTalksDev/liquid-glass',
-			tags: ['SvelteKit', 'Spotify API', 'UI/UX'],
-			skills: [0, 1]
+			tags: ['iPhone app', 'Gaming', 'Marketing'],
+			skills: [11, 1, 12, 14],
+			active: true
 		},
 		{
 			name: 'PROS Telemetry',
 			img: '/projects/pros-telemetry/telemetry.png',
 			showcaseImgs: [],
-			tagline: 'Innovate Award @ Washington State Regionals 2025<br/>Think Award @ Washington State Regionals 2026',
-			shortDescription: 'Python service that streams real-time VEX robot telemetry to SQLite, parsing JSON terminal data with particle filter tracking for match analysis.',
+			tagline:
+				'Innovate Award @ Washington State Regionals 2025<br/>Think Award @ Washington State Regionals 2026',
+			shortDescription:
+				'Python service that streams real-time VEX robot telemetry to SQLite, parsing JSON terminal data with particle filter tracking for match analysis.',
 			longDescription:
 				'Lightweight Python service that <strong>streams telemetry from VEX robots</strong> directly into SQLite for local analysis and debugging.<br/><br/>The parser hooks into `pros t` (the PROS terminal), reads JSON telemetry in real time, and writes structured data to the database. <strong>Particle filter points</strong> get their own table for spatial analysis, while unknown fields are preserved as JSON for flexibility. Old particles are automatically culled to keep performance stable.<br/><br/>Built for robotics teams who need fast, reliable data collection during matches and practice.',
 			github: 'https://github.com/TechnoTalksDev/pros-telemetry',
 			tags: ['Python', 'VEX', 'Dev Tool'],
-			skills: [3, 8]
-		},
-		{
-			name: 'Simeo',
-			img: '/projects/simeo/simeo_full.png',
-			showcaseImgs: [],
-			tagline: '2k+ views per month <br/>500+ active users',
-			shortDescription: 'Full-stack GPA and grade calculator with seamless Synergy integration, highly customizable calculation logic for different grading scales.',
-			longDescription:
-				'Built specifically for Synergy students who needed a fast, reliable way to calculate GPAs and track grades. With <strong>seamless integration</strong> directly into the Synergy platform, users can see real-time calculations without manual data entry.<br/><br/>Highly <strong>customizable calculation logic</strong> handles different grading scales and weighting systems, making it flexible for various school districts. Over 1.3k views per month shows students find real value in having a tool they can trust with their academic data.',
-			link: 'https://www.simeo.app/',
-			github: 'https://github.com/TechnoTalksDev/Simeo',
-			tags: ['FBLA', 'full-stack'],
-			skills: [0, 1, 2, 6]
+			skills: [3, 4, 8],
+			active: true
 		},
 		{
 			name: 'Steamoji Robotics',
 			img: '/projects/steamoji/steamoji.png',
 			showcaseImgs: [],
 			tagline: 'Live event and award data for VEX robotics.',
-			shortDescription: 'Student-led VEX organization hub with live event feeds, team pages, and award tracking—the primary communication center for parents and students.',
+			shortDescription:
+				'Student-led VEX organization hub with live event feeds, team pages, and award tracking—the primary communication center for parents and students.',
 			longDescription:
 				'The digital hub for Steamoji Robotics—a student-led VEX organization. This SvelteKit site serves as the <strong>primary communication center</strong> for parents, students, and coaches.<br/><br/>Features <strong>live feeds of event and award data</strong>, team pages, program information, and event tracking. Built to be the single source of truth for everything Steamoji robotics. Clean, fast, and designed for easy navigation by all ages.',
 			link: 'https://www.steamojibelredrobotics.org/',
 			github: 'https://github.com/TechnoTalksDev/steamoji-site',
-			tags: ['SvelteKit', 'VEX', 'Robotics'],
-			skills: [0, 1, 8]
-		},
-		{
-			name: 'ThePiSchool',
-			img: '/projects/thepischool/thepischool.png',
-			showcaseImgs: [],
-			shortDescription: 'Freelance SvelteKit site for boutique tutoring service, optimized for lead conversion with testimonials, CTAs, and professional design.',
-			longDescription:
-				'A freelance project building a professional web presence for The Pi School, a boutique tutoring service. The site combines clean, modern design with clear messaging about tutoring value and accessibility.<br/><br/><strong>Focused on converting visitors into leads</strong> through targeted CTAs, testimonial sections to build trust, and easy contact flows. The design reflects the personalized, thoughtful approach the tutoring service brings to education.',
-			link: 'https://thepischools.com/',
-			github: '',
-			tags: ['SvelteKit', 'full-stack', 'Business'],
-			skills: [0, 1, 6]
+			tags: ['Robotics', 'Community Hub', 'Live Data'],
+			skills: [0, 1, 8],
+			active: true
 		},
 		{
 			name: 'trckr',
 			img: '/projects/trckr/trckr.png',
 			showcaseImgs: [],
 			//tagline: 'GitHub-style commit graph for daily habits.',
-			shortDescription: 'Progressive web app for tracking habits with GitHub-style commit graphs, daily notifications, streak tracking, and historical accuracy.',
+			shortDescription:
+				'Progressive web app for tracking habits with GitHub-style commit graphs, daily notifications, streak tracking, and historical accuracy.',
 			longDescription:
-				'A progressive web app for tracking daily habits with a <strong>GitHub-inspired commit graph</strong>. Check off habits each day and watch your progress visualize over time.<br/><br/>Features include daily notifications, detailed stats (streaks, reliability scores, best days), and <strong>historical accuracy</strong>—you can add or remove habits without messing up past data. It\'s a PWA so you can install it on your phone and get local notifications. Simple, clean, mobile-first design.<br/><br/>Built over a weekend with SvelteKit and PocketBase, so expect some quirks—but it fundamentally works and feels great to use.',
+				"A progressive web app for tracking daily habits with a <strong>GitHub-inspired commit graph</strong>. Check off habits each day and watch your progress visualize over time.<br/><br/>Features include daily notifications, detailed stats (streaks, reliability scores, best days), and <strong>historical accuracy</strong>—you can add or remove habits without messing up past data. It's a PWA so you can install it on your phone and get local notifications. Simple, clean, mobile-first design.<br/><br/>Built over a weekend with SvelteKit and PocketBase, so expect some quirks—but it fundamentally works and feels great to use.",
 			link: 'https://trckr-beige.vercel.app',
 			github: 'https://github.com/TechnoTalksDev/trckr',
-			tags: ['SvelteKit', 'PWA', 'Productivity'],
+			tags: ['PWA', 'Productivity', 'Habit Tracking'],
 			skills: [0, 1, 9]
 		},
 		{
-			name: 'Reko',
-			img: '/projects/reko/reko-banner.png',
+			name: 'Liquid Glass',
+			img: '/projects/liquid-glass/liquid-glass.png',
 			showcaseImgs: [],
-			tagline: '150+ commits on Discord bot',
-			shortDescription: 'Python Discord bot providing real-time Minecraft server monitoring with player count, latency, MOTD, and per-guild server tracking.',
+			shortDescription:
+				'Recreation of iOS glass morphism media player powered by live Spotify data, built with SvelteKit and n8n backend for real-time sync.',
 			longDescription:
-				'A Discord bot that keeps you updated on your Minecraft server\'s health. Get player count, online players, server version, MOTD, latency, and approximate location all in one place.<br/><br/>Built with Python and Docker, so it\'s easy to deploy and scale. The bot lets you set <strong>per-guild server tracking</strong>, handles latency pings from the bot to your server, and has planned features for player join/leave tracking and automatic role assignment for online players.<br/><br/>Also has a website at reko.technotalks.net for easy setup and information.',
-			github: 'https://github.com/TechnoTalksDev/Reko',
-			tags: ['Discord', 'Minecraft', 'API'],
-			skills: [3, 2, 7]
+				"I was incredibly fascinated by the <strong>iOS 26 “liquid glass”</strong> update on my iPhone and wanted to recreate the effect using SVG filters and other css shader tricks. I stumbled upon this video and decided to see how far I could push it. <br/><br/>This project is my own take on the iOS media player UI, with a bit of personal flair. The interface you see here is actually powered by <strong>live Spotify data</strong>, pulled every ~5 seconds, which enables the real-time progress bar for the currently playing song.<br/><br/>Playback, track skip, and volume controls are just there for the sake of UI completeness (and my sanity)—they're non-functional, since I didn’t want to give the internet full control over my music.<br/><br/>The backend is built using an <strong>n8n workflow</strong> and <strong>Redis cache</strong> to avoid hitting Spotify’s rate limits when handling multiple users. Threw this together in a day, so if you run into any quirks... just pretend you didn’t :)",
+			link: 'https://glass.chandanc.me/',
+			github: 'https://github.com/TechnoTalksDev/liquid-glass',
+			tags: ['Spotify API', 'UI/UX', 'Apple'],
+			skills: [0, 1, 15, 16]
+		},
+		{
+			name: 'ThePiSchool',
+			img: '/projects/thepischool/thepischool.png',
+			showcaseImgs: [],
+			shortDescription:
+				'Freelance SvelteKit site for boutique tutoring service, optimized for lead conversion with testimonials, CTAs, and professional design.',
+			longDescription:
+				'A freelance project building a professional web presence for The Pi School, a boutique tutoring service. The site combines clean, modern design with clear messaging about tutoring value and accessibility.<br/><br/><strong>Focused on converting visitors into leads</strong> through targeted CTAs, testimonial sections to build trust, and easy contact flows. The design reflects the personalized, thoughtful approach the tutoring service brings to education.',
+			link: 'https://thepischools.com/',
+			github: '',
+			tags: ['Freelance', 'Lead Gen', 'Education Business'],
+			skills: [0, 1, 6]
+		},
+		{
+			name: 'buildpublic',
+			img: '/projects/buildpublic/buildpublic.png',
+			showcaseImgs: [],
+			shortDescription:
+				'SvelteKit UI demo showcasing clean dashboard patterns for startups and creators to transparently share progress and build community accountability.',
+			longDescription:
+				'A beautiful SvelteKit demo showcasing what a "build in public" dashboard looks like. Perfect for startups, creators, and clubs who want to share their progress transparently with their audience.<br/><br/>This project is all about <strong>clean UI patterns</strong>—landing pages, dashboard layouts, cards, and sections that make <strong>progress updates feel natural and engaging</strong>. Think of it as a template for anyone wanting to build accountability into their public journey.',
+			link: 'https://www.buildpublic.app/',
+			github: 'https://github.com/TechnoTalksDev/buildpublic',
+			tags: ['UI/UX', 'Dashboard', 'Build in Public'],
+			skills: [0, 1]
+		},
+		{
+			name: 'Flow',
+			img: '/projects/flow/flow.png',
+			showcaseImgs: [],
+			//tagline: 'Implements Parkinson\'s Law for task efficiency.',
+			shortDescription:
+				'Gamified productivity app using intentional time pressure and XP rewards to keep tasks focused, featuring grace periods and real-time progress tracking.',
+			longDescription:
+				'Built on the insight that <strong>work expands to fill available time</strong>. Flow uses intentional time pressure and gamification to keep you focused and productive.<br/><br/>Features include time-boxed task sessions, real-time XP rewards based on time spent, performance tracking with completion stats, and a clean distraction-free focus interface. The <strong>grace period system</strong> balances challenge with fairness—you get a minute to wrap up before auto-fail.<br/><br/>Targeted at Gen Z/Gen Alpha, with built-in achievements and streak systems ready to go. Designed to make productivity feel like a game, not a chore.',
+			link: 'https://flow.technotalks.net/',
+			github: 'https://github.com/TechnoTalksDev/flow',
+			tags: ['Productivity', 'Gamification', 'Focus Tool'],
+			skills: [0, 1, 13]
 		},
 		{
 			name: 'Rider-MC',
 			img: '/projects/rider-mc/rider-banner.png',
 			showcaseImgs: [],
 			tagline: '1000+ downloads on SpigotMC',
-			shortDescription: 'Java Minecraft plugin enabling players to ride any mob with full permission control, custom behavior, and cross-version compatibility.',
+			shortDescription:
+				'Java Minecraft plugin enabling players to ride any mob with full permission control, custom behavior, and cross-version compatibility.',
 			longDescription:
 				'A simple but popular Minecraft plugin that adds a fun mechanic: ride any mob in your world. <strong>Full permission support</strong> for fine-grained control, customizable behavior, and works across versions.<br/><br/>Over 1000 downloads shows the community appreciates the simplicity and polish. Easy to install, intuitive to use, and genuinely fun to play with.',
 			link: 'https://www.spigotmc.org/resources/rider-simple-easy-ride-anything-1-8x-1-17x.93807/',
 			github: 'https://github.com/TechnoTalksDev/Rider-MC',
 			tags: ['Minecraft', 'Plugin', 'Java'],
 			skills: [5]
+		},
+		{
+			name: 'Reko',
+			img: '/projects/reko/reko-banner.png',
+			showcaseImgs: [],
+			tagline: '150+ commits on Discord bot',
+			shortDescription:
+				'Python Discord bot providing real-time Minecraft server monitoring with player count, latency, MOTD, and per-guild server tracking.',
+			longDescription:
+				"A Discord bot that keeps you updated on your Minecraft server's health. Get player count, online players, server version, MOTD, latency, and approximate location all in one place.<br/><br/>Built with Python and Docker, so it's easy to deploy and scale. The bot lets you set <strong>per-guild server tracking</strong>, handles latency pings from the bot to your server, and has planned features for player join/leave tracking and automatic role assignment for online players.<br/><br/>Also has a website at reko.technotalks.net for easy setup and information.",
+			github: 'https://github.com/TechnoTalksDev/Reko',
+			tags: ['Discord', 'Minecraft', 'API'],
+			skills: [3, 2, 7]
 		}
-
-
-		
 	];
 
 	/*

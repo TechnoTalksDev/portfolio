@@ -122,7 +122,7 @@
 						<p class="font-bold mt-1">{@html project.tagline}</p>
 					{/if}
 
-			<p class="font-normal mt-5 text-lg">{@html project.longDescription}</p>
+			<p class="font-medium mt-5 text-lg">{@html project.longDescription}</p>
 		</div>
 	</div>
 </div>
