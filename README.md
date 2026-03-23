@@ -60,4 +60,3 @@ Or with npm:
 ```bash
 npm run preview
 ```
-
