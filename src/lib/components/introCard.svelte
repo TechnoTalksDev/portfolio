@@ -3,13 +3,19 @@
 		<h2 class="h2">
 			Hey I'm <span class="wave">👋</span><br />
 		</h2>
-		<span
-				class="h1 text-left text-6xl gradient-heading animate-gradient">Chandan</span
-			>
+		<span class="h1 text-left text-6xl gradient-heading animate-gradient">Chandan</span>
 
 		<div class="flex flex-row fill-white justify-between items-center mt-4 px-1">
 			<a href="mailto:chandan.chengalvala@gmail.com" target="_blank">
-				<svg class="w-[2rem] fill-white" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gmail</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+				<svg
+					class="w-[2rem] fill-white"
+					role="img"
+					viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg"
+					><title>Gmail</title><path
+						d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+					/></svg
+				>
 			</a>
 
 			<a href="https://github.com/TechnoTalksDev" target="_blank">
@@ -35,7 +41,10 @@
 	<div class="inline my-8 h-[4px] rounded-xl gradient-bar animate-gradient" />
 	<div class="text-left">
 		<p class="h5 font-medium">
-			Entering university from 📍Washington. <strong>Builder obsessed with shipping</strong> — from <strong>quick ideas to scaled apps</strong> serving <strong>thousands of users</strong>. Full-stack developer across web, mobile, 🤖 robotics, and APIs.
+			Entering university from 📍Washington. <strong>Builder obsessed with shipping</strong> — from
+			<strong>quick ideas to scaled apps</strong>
+			serving <strong>thousands of users</strong>. Full-stack developer across web, mobile, 🤖
+			robotics, and APIs.
 		</p>
 	</div>
 </div>

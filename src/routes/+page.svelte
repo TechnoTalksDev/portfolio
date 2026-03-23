@@ -61,7 +61,7 @@
 		message:
 			"<strong>Hey! <span class='wave text-2xl'>👋</span></strong> <br/>Looks like you might ❤️ my work! <br/> Want experiences like this for yourself? 🚧 <br/> <a href='#contact' class='btn btn-md btn-hover variant-glass-success mt-1 font-semibold'>Get in touch!</a>",
 		background: 'variant-glass-primary',
-		timeout: 60000,
+		timeout: 60000
 	};
 
 	onMount(() => {
@@ -457,7 +457,7 @@
 			company: 'NC FBLA',
 			position: 'Tech Committee',
 			blurb:
-				'Maintain <strong>NC FBLA\'s technology initiatives</strong> and develop mobile solutions.<br/><br/>Build digital tools for local business partners to support chapter and community impact.',
+				"Maintain <strong>NC FBLA's technology initiatives</strong> and develop mobile solutions.<br/><br/>Build digital tools for local business partners to support chapter and community impact.",
 			skills: [10]
 		},
 		{

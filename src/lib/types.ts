@@ -16,5 +16,5 @@ export interface Project {
 	github?: string;
 	tags: string[];
 	skills: number[];
-  active?: boolean;
+	active?: boolean;
 }

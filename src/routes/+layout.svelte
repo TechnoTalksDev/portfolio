@@ -30,7 +30,7 @@
 		>
 			<DockIcon mode="text" {mouseX} {magnification} {distance}>
 				<a
-					class="btn btn-sm text-shadow-md drop-shadow-xl text-lg whitespace-nowrap hover:underline  {$currentSection ===
+					class="btn btn-sm text-shadow-md drop-shadow-xl text-lg whitespace-nowrap hover:underline {$currentSection ===
 					'hey'
 						? 'gradient-heading animate-gradient'
 						: ''}"
@@ -69,7 +69,8 @@
 
 			<DockIcon mode="text" {mouseX} {magnification} {distance}>
 				<a
-					class="btn btn-sm text-shadow-md drop-shadow-xl text-lg whitespace-nowrap hover:underline {$currentSection === 'contact'
+					class="btn btn-sm text-shadow-md drop-shadow-xl text-lg whitespace-nowrap hover:underline {$currentSection ===
+					'contact'
 						? 'gradient-heading animate-gradient'
 						: ''}"
 					href="#contact"

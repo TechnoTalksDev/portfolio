@@ -69,11 +69,11 @@
 		</button>
 
 		<a href={project.link ?? project.github} target="_blank">
-      <div
-        class="w-full h-[50vh] project-hero bg-cover bg-center rounded-xl"
-        style="background-image: url('{project.img}');"
-      ></div>
-    </a>
+			<div
+				class="w-full h-[50vh] project-hero bg-cover bg-center rounded-xl"
+				style="background-image: url('{project.img}');"
+			></div>
+		</a>
 
 		<div class="text-left -mt-4">
 			<div class="flex flex-row items-center flex-wrap gap-y-2">
@@ -104,25 +104,25 @@
 
 			<div class="flex flex-row flex-wrap items-center justify-between mt-1">
 				<div class="flex flex-row justify-center items-center">
-          {#each project.skills as index}
-            {#if skills[index]}
-              <a href="{skills[index].link}" target="_blank">
+					{#each project.skills as index}
+						{#if skills[index]}
+							<a href={skills[index].link} target="_blank">
 								<div class="flex-none w-[24px] mr-3">
 									<img src={skills[index].img} alt={skills[index].name + ' logo'} />
 								</div>
 							</a>
-            {/if}
-          {/each}
-        </div>
+						{/if}
+					{/each}
+				</div>
 				<div>
-          {#each project.tags as tag}
-            <span class="text-xl mr-2 text-primary-400">#{tag}</span>
-          {/each}
-        </div>
+					{#each project.tags as tag}
+						<span class="text-xl mr-2 text-primary-400">#{tag}</span>
+					{/each}
+				</div>
 			</div>
-      					{#if project.tagline}
-						<p class="font-bold mt-1">{@html project.tagline}</p>
-					{/if}
+			{#if project.tagline}
+				<p class="font-bold mt-1">{@html project.tagline}</p>
+			{/if}
 
 			<p class="font-medium mt-5 text-lg">{@html project.longDescription}</p>
 		</div>
