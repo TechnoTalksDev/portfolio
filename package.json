@@ -1,7 +1,7 @@
 {
 	"name": "technotalks-portfolio",
-	"version": "0.0.1",
-	"private": true,
+	"version": "2.0",
+	"private": false,
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
