@@ -369,7 +369,7 @@
 			shortDescription:
 				'Python Discord bot providing real-time Minecraft server monitoring with player count, latency, MOTD, and per-guild server tracking.',
 			longDescription:
-				"A Discord bot that keeps you updated on your Minecraft server's health. Get player count, online players, server version, MOTD, latency, and approximate location all in one place.<br/><br/>Built with Python and Docker, so it's easy to deploy and scale. The bot lets you set <strong>per-guild server tracking</strong>, handles latency pings from the bot to your server, and has planned features for player join/leave tracking and automatic role assignment for online players.<br/><br/>Also has a website at reko.technotalks.net for easy setup and information.",
+				"A Discord bot that keeps you updated on your Minecraft server's health. Get player count, online players, server version, MOTD, latency, and approximate location all in one place.<br/><br/>Built with Python and Docker, so it's easy to deploy and scale. The bot lets you set <strong>per-guild server tracking</strong>, handles latency pings from the bot to your server, and has planned features for player join/leave tracking and automatic role assignment for online players.",
 			github: 'https://github.com/TechnoTalksDev/Reko',
 			tags: ['Discord', 'Minecraft', 'API'],
 			skills: [3, 2, 7]
