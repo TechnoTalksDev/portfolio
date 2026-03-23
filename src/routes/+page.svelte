@@ -288,7 +288,7 @@
 			shortDescription:
 				'Progressive web app for tracking habits with GitHub-style commit graphs, daily notifications, streak tracking, and historical accuracy.',
 			longDescription:
-				"I wanted a clean habit tracker that could actually motivate me by making progress feel visual and rewarding. After looking at the <strong>GitHub contribution graph</strong>, I was inspired to build something with the same familiar UX language, but focused specifically on daily habits and a more aesthetic, distraction-free experience.<br/><br/>trckr is a progressive web app where you check off habits each day and watch your consistency build over time through a GitHub-inspired <strong>habbit graph</strong>. It includes daily notifications, detailed stats (streaks, reliability scores, best days), and <strong>historical accuracy</strong>.<br/><br/>It's installable as a PWA with local notifications and designed mobile-first for quick daily use. Built over a weekend with SvelteKit and PocketBase, so expect a few quirks here and there, but the core experience is solid and I genuinely find it useful in my day to day.",
+				"I wanted a clean habit tracker that could actually motivate me by making progress feel visual and rewarding. After looking at the <strong>GitHub contribution graph</strong>, I was inspired to build something with the same familiar UX language, but focused specifically on daily habits and a more aesthetic, distraction-free experience.<br/><br/>trckr is a progressive web app where you check off habits each day and watch your consistency build over time through a GitHub-inspired <strong>habit graph</strong>. It includes daily notifications, detailed stats (streaks, reliability scores, best days), and <strong>historical accuracy</strong>.<br/><br/>It's installable as a PWA with local notifications and designed mobile-first for quick daily use. Built over a weekend with SvelteKit and PocketBase, so expect a few quirks here and there, but the core experience is solid and I genuinely find it useful in my day to day.",
 			link: 'https://trckr-beige.vercel.app',
 			github: 'https://github.com/TechnoTalksDev/trckr',
 			tags: ['PWA', 'Productivity', 'Habit Tracking'],
@@ -438,7 +438,7 @@
 		},
 		{
 			date: 'July - August 2024',
-			company: 'Quadrant',
+			company: 'Quadrant Technologies',
 			position: 'Intern',
 			blurb:
 				'Led interns as <strong>SCRUM Master</strong> to build a data-driven application for a company pitch, leveraging modern cloud and AI technologies.<br/><br/>Competed with <strong>11+ collegiate teams</strong> as a high school intern and placed <strong>Top 3</strong> in the final pitch competition to top-level executives.',
