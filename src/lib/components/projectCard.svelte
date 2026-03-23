@@ -43,7 +43,6 @@
 						<!-- <span class="text-sm font-bold ">Active</span> -->
 						<div class="w-2 h-2 rounded-full animate-ping bg-green-500"></div>
 					{/if}
-
 				</div>
 				<div
 					id="bgimg"
@@ -82,7 +81,7 @@
 					<div class="flex flex-row items-center">
 						{#each project.skills as index}
 							<div class="flex-none w-[20px] mr-2">
-								<a href="/" class="" on:click|stopPropagation>
+								<a href={skills[index].link} target="_blank" on:click|stopPropagation>
 									<img src={skills[index].img} alt={skills[index].name + ' logo'} class="" />
 								</a>
 							</div>

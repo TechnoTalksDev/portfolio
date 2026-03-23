@@ -49,7 +49,7 @@
 {#if enabled}
 	<div
 		id="blob"
-		class="z-[-1] absolute w-[20rem] h-[17rem] rounded-[50%] bg-gradient-to-br from-primary-500 via-tertiary-500 to-secondary-500 opacity-30 overflow-x-hidden"
+		class="z-[-1] absolute w-[20rem] h-[17rem] rounded-[50%] bg-gradient-to-br from-primary-500 via-tertiary-500 to-secondary-500 opacity-30 overflow-x-hidden transform-gpu"
 		style="top: {$y}px; left: {$x}px; animation-name: spin; animation-duration: 30s;"
 		transition:fade
 	></div>

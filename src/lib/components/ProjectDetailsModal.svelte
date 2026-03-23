@@ -106,9 +106,11 @@
 				<div class="flex flex-row justify-center items-center">
           {#each project.skills as index}
             {#if skills[index]}
-              <div class="flex-none w-[24px] mr-3">
-                <img src={skills[index].img} alt={skills[index].name + ' logo'} />
-              </div>
+              <a href="{skills[index].link}" target="_blank">
+								<div class="flex-none w-[24px] mr-3">
+									<img src={skills[index].img} alt={skills[index].name + ' logo'} />
+								</div>
+							</a>
             {/if}
           {/each}
         </div>

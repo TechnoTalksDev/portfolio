@@ -42,7 +42,7 @@
 						<div class="flex flex-row items-center ml-2">
 							{#each experience.skills as index}
 								<div class="flex-none w-[15px] mx-1">
-									<a href="/" class="">
+									<a href={skills[index].link} target="_blank" rel="noopener noreferrer">
 										<img src={skills[index].img} alt={skills[index].name + ' logo'} class="" />
 									</a>
 								</div>
@@ -62,7 +62,7 @@
 						</h3>
 					</div>
 
-					<p class="text-base font-normal text-gray-300">
+					<p class="text-base font-normal">
 						{@html experience.blurb}
 					</p>
 				</div>

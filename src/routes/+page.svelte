@@ -59,9 +59,9 @@
 
 	const comingSoon: ToastSettings = {
 		message:
-			"<strong>Hey! <span class='wave text-2xl'>👋</span></strong> <br/>Look's like you ❤️ my work! <br/> Want experiences like this for yourself? 🚧 <br/> <a href='#contact' class='btn btn-md btn-hover variant-glass-success mt-1 font-semibold'>Get in touch!</a>",
+			"<strong>Hey! <span class='wave text-2xl'>👋</span></strong> <br/>Looks like you might ❤️ my work! <br/> Want experiences like this for yourself? 🚧 <br/> <a href='#contact' class='btn btn-md btn-hover variant-glass-success mt-1 font-semibold'>Get in touch!</a>",
 		background: 'variant-glass-primary',
-		timeout: 60000
+		timeout: 60000,
 	};
 
 	onMount(() => {
@@ -132,60 +132,80 @@
 		{
 			name: 'SvelteKit',
 			img: '/skills/svelte.png',
-			skill: 4.4
+			skill: 4.4,
+			link: 'https://svelte.dev/'
 		},
 		{
 			name: 'TypeScript',
 			img: '/skills/typescript.png',
-			skill: 3.8
+			skill: 3.8,
+			link: 'https://www.typescriptlang.org/'
 		},
 		{
 			name: 'MongoDB',
 			img: '/skills/mongo.png',
-			skill: 2.8
+			skill: 2.8,
+			link: 'https://www.mongodb.com/'
 		},
 		{
 			name: 'Python',
 			img: '/skills/python.png',
-			skill: 3.6
+			skill: 3.6,
+			link: 'https://www.python.org/'
 		},
 		{
 			name: 'C++',
 			img: '/skills/cplusplus.png',
-			skill: 2.6
+			skill: 2.6,
+			link: 'https://isocpp.org/'
 		},
 		{
 			name: 'Kotlin',
 			img: '/skills/kotlin.png',
-			skill: 2.5
+			skill: 2.5,
+			link: 'https://kotlinlang.org/'
 		},
 		{
 			name: 'Azure',
 			img: '/skills/azure.png',
-			skill: 3.6
+			skill: 3.6,
+			link: 'https://azure.microsoft.com/en-us'
 		},
 		{
 			name: 'Docker',
 			img: '/skills/docker.png',
-			skill: 4.2
+			skill: 4.2,
+			link: 'https://www.docker.com/'
 		},
 		{
 			name: 'VEX',
 			img: '/skills/vex.png',
-			skill: 4.2
+			skill: 4.2,
+			link: 'https://www.vexrobotics.com/v5/competition/vrc-current-game'
 		},
 		{
 			name: 'PocketBase',
 			img: '/skills/pb.svg',
-			skill: 4.2
+			skill: 4.2,
+			link: 'https://pocketbase.io/'
 		},
-		{ name: 'Flutter', img: 'skills/flutter.svg', skill: 3.2 },
-		{ name: 'React', img: 'skills/react.png', skill: 3.0 },
-		{ name: 'Firebase', img: '/skills/firebase.png', skill: 3.0 },
-		{ name: 'Supabase', img: '/skills/supabase.webp', skill: 3.0 },
-		{ name: 'Apple AppStore', img: '/skills/appstore.png', skill: 3.0 },
-		{ name: 'n8n', img: '/skills/n8n.png', skill: 3.0 },
-		{ name: 'Redis', img: '/skills/redis.png', skill: 3.0 }
+		{ name: 'Flutter', img: 'skills/flutter.svg', skill: 3.2, link: 'https://flutter.dev/' },
+		{ name: 'React', img: 'skills/react.png', skill: 3.0, link: 'https://react.dev/' },
+		{
+			name: 'Firebase',
+			img: '/skills/firebase.png',
+			skill: 3.0,
+			link: 'https://firebase.google.com/'
+		},
+		{ name: 'Supabase', img: '/skills/supabase.webp', skill: 3.0, link: 'https://supabase.com/' },
+		{
+			name: 'Apple AppStore',
+			img: '/skills/appstore.png',
+			skill: 3.0,
+			link: 'https://developer.apple.com/app-store/'
+		},
+		{ name: 'n8n', img: '/skills/n8n.png', skill: 3.0, link: 'https://n8n.io/' },
+		{ name: 'Redis', img: '/skills/redis.png', skill: 3.0, link: 'https://redis.io/' }
 	];
 
 	const projects: Project[] = [
@@ -208,7 +228,7 @@
 			shortDescription:
 				'The most powerful and intuitive grade calculator for StudentVue students with live editing, visual breakdowns, weighted GPA tracking, and AI-powered study insights.',
 			longDescription:
-				'Simeo was a <strong>6-month journey</strong> of learning full-stack web technologies while building a production-ready application. I had to master <strong>JWT authentication, database security, and server-side rendering performance</strong> optimizations. Starting with close friends as testers, it expanded to my entire school, eventually becoming a tool hundreds of students across the nation relied on for grade calculation. As my first public product, it was a milestone—though no longer operational due to legal and uptime considerations, it remains an incredible learning experience.<br/><br/>The app itself combines powerful features with beautiful simplicity: <strong>live grade editing</strong> lets you add future assignments and see exactly how your grade changes. <strong>Visual breakdowns</strong instantly show how each category contributes to your final grade. Support for both weighted and unweighted GPAs across multiple years keeps your academic history organized. The <strong>AI-powered tutor</strong> provides study tips and resources for specific assignments. All without ever storing your StudentVue credentials.',
+				'Simeo was a <strong>6-month journey</strong> of learning full-stack web technologies while building a production-ready application. I had to master <strong>JWT authentication, database security, and server-side rendering performance</strong> optimizations. Starting with close friends as testers, it expanded to my entire school, eventually becoming a tool hundreds of students across the nation relied on for grade calculation. As my first public product, it was a milestone—though no longer operational due to legal and uptime considerations, it remains an incredible learning experience.<br/><br/>The app itself combines powerful features with beautiful simplicity: <strong>live grade editing</strong> lets you add future assignments and see exactly how your grade changes. <strong>Visual breakdowns</strong> instantly show how each category contributes to your final grade. Support for both weighted and unweighted GPAs across multiple years keeps your academic history organized. The <strong>AI-powered tutor</strong> provides study tips and resources for specific assignments. All without ever storing your StudentVue credentials.',
 			link: 'https://www.simeo.app/',
 			github: 'https://github.com/TechnoTalksDev/Simeo',
 			tags: ['FBLA', 'full-stack'],
@@ -219,13 +239,13 @@
 			name: 'Crusyn',
 			img: '/projects/crusyn/crusyn-website.png',
 			showcaseImgs: [],
-			tagline: '100+ TestFlight signups in 2 weeks',
+			tagline: '100+ TestFlight signups within 2 weeks',
 			shortDescription:
 				'Real-world driving game that turns your city into an open-world playground with map-based challenges, live scoring, leaderboards, and shareable run results.',
 			longDescription:
-				'Crusyn started as an idea I wanted to test from the ground up, then grew into a real startup and a live product journey toward the App Store. I built it because I genuinely loved the feeling of playing it myself: <strong>that feeling behind the wheel is not gone</strong>.<br/><br/>The app turns your city into a real-world game. You explore an open-world map, discover challenges, and launch location-based experiences that get you off your phone and into your surroundings. In <strong>Blind Rally</strong> (available now), you memorize a route and drive it back without GPS, then get scored in real time on accuracy, speed, and decisions. <strong>Cruises</strong> (coming soon) adds freeroam drive tracking, XP progression, and skill-based scoring.<br/><br/>Every session builds your profile: review detailed run stats, compare performance over time, climb public leaderboards, compete with friends, and share custom stat cards with your driving archetype. Right now we are running a <strong>TestFlight beta</strong> and actively bringing on new drivers and testers through social media as we prepare for full App Store release. I had so much fun building and playing Crusyn, and I want to share that experience with the world.',
+				'Crusyn started as an idea we wanted to test from the ground up, then grew into a real startup and a live product journey toward the App Store. I built it because I genuinely loved the feeling of playing it myself: <strong>that feeling behind the wheel is not gone</strong>.<br/><br/>The app turns your city into a real-world game. You explore an open-world map, discover challenges, and launch location-based experiences that get you off your phone and into your surroundings. In <strong>Blind Rally</strong> (available now), you memorize a route and drive it back without GPS, then get scored in real time on accuracy, speed, and decisions. <strong>Cruises</strong> (coming soon) adds freeroam drive tracking, XP progression, and skill-based scoring.<br/><br/>Every session builds your profile: review detailed run stats, compare performance over time, climb public leaderboards, compete with friends, and share custom stat cards with your driving archetype. Right now we are running a <strong>TestFlight beta</strong> and actively bringing on new drivers and testers through social media as we prepare for full App Store release. I had so much fun building and playing Crusyn, and I want to share that experience with the world.',
 			link: 'https://crusyn.app',
-			github: 'https://github.com/TechnoTalksDev/crusyn-website',
+			//github: 'https://github.com/TechnoTalksDev/crusyn-website',
 			tags: ['iPhone app', 'Gaming', 'Marketing'],
 			skills: [11, 1, 12, 14],
 			active: true
@@ -237,9 +257,9 @@
 			tagline:
 				'Innovate Award @ Washington State Regionals 2025<br/>Think Award @ Washington State Regionals 2026',
 			shortDescription:
-				'Python service that streams real-time VEX robot telemetry to SQLite, parsing JSON terminal data with particle filter tracking for match analysis.',
+				'Award-winning real-time VEX V5 telemetry system that streams robot data into SQLite and Grafana for faster debugging, tuning, and match-ready iteration.',
 			longDescription:
-				'Lightweight Python service that <strong>streams telemetry from VEX robots</strong> directly into SQLite for local analysis and debugging.<br/><br/>The parser hooks into `pros t` (the PROS terminal), reads JSON telemetry in real time, and writes structured data to the database. <strong>Particle filter points</strong> get their own table for spatial analysis, while unknown fields are preserved as JSON for flexibility. Old particles are automatically culled to keep performance stable.<br/><br/>Built for robotics teams who need fast, reliable data collection during matches and practice.',
+				'This telemetry stack is a completely bespoke system for VEX V5, and it became a repeat award winner in one of Washington&#39;s most competitive robotics regions.<br/><br/>For most VEX teams, software iteration is still mostly <strong>guess-and-check</strong>: maybe a few logs written to an SD card, then reviewed only after a match. After two years in the ecosystem, I felt that workflow was far behind modern robotics. Watching how Formula 1 teams use dense, continuous telemetry to tune every detail made me ask a simple question: why not do the same in VEX?<br/><br/>I found a couple of existing attempts, but neither delivered the <strong>live throughput</strong> I needed. In VEX, development is constant micro-iteration, so non-live pipelines quickly become too slow to matter. I explored multiple architectures, including direct Bluetooth links to the VEX Brain, but hardware restrictions made Bluetooth too limited in both bandwidth and connection reliability.<br/><br/>The breakthrough was using a proven wireless text path that already exists in VEX: the controller-to-brain link. A laptop connects to the controller and uses a spare channel to receive streamed text data. On the robot, I built a lightweight C++ library that publishes JSON packets; on the laptop, a Python service parses the stream, writes structured records to SQLite, and feeds live dashboards in Grafana.<br/><br/>This end-to-end design delivers <strong>low-latency, real-time telemetry</strong> while staying inside first-party VEX communication infrastructure. Across two seasons, it helped us identify failing motors, correct autonomous drift, and tune Monte Carlo particle localization with far more confidence. I plan to document and open-source this approach so more VEX teams can move from intuition-only tuning to a truly data-driven workflow.',
 			github: 'https://github.com/TechnoTalksDev/pros-telemetry',
 			tags: ['Python', 'VEX', 'Dev Tool'],
 			skills: [3, 4, 8],
@@ -253,9 +273,9 @@
 			shortDescription:
 				'Student-led VEX organization hub with live event feeds, team pages, and award tracking—the primary communication center for parents and students.',
 			longDescription:
-				'The digital hub for Steamoji Robotics—a student-led VEX organization. This SvelteKit site serves as the <strong>primary communication center</strong> for parents, students, and coaches.<br/><br/>Features <strong>live feeds of event and award data</strong>, team pages, program information, and event tracking. Built to be the single source of truth for everything Steamoji robotics. Clean, fast, and designed for easy navigation by all ages.',
+				"I recently joined this new student-led robotics organization and quickly noticed one major gap: there was <strong>no clear central hub</strong> for updates. Parents and students were constantly left searching for information, so I stepped in and helped build the website to solve that problem.<br/><br/>This SvelteKit platform now acts as the organization's <strong>single source of truth</strong>, pulling live data from the VEX Robot Events API to surface upcoming competitions, award wins, team updates, and more in real time. Beyond keeping everyone informed, the site is designed to feel welcoming and easy to navigate, helping <strong>new families discover and join our robotics community</strong>.",
 			link: 'https://www.steamojibelredrobotics.org/',
-			github: 'https://github.com/TechnoTalksDev/steamoji-site',
+			//github: 'https://github.com/TechnoTalksDev/steamoji-site',
 			tags: ['Robotics', 'Community Hub', 'Live Data'],
 			skills: [0, 1, 8],
 			active: true
@@ -268,7 +288,7 @@
 			shortDescription:
 				'Progressive web app for tracking habits with GitHub-style commit graphs, daily notifications, streak tracking, and historical accuracy.',
 			longDescription:
-				"A progressive web app for tracking daily habits with a <strong>GitHub-inspired commit graph</strong>. Check off habits each day and watch your progress visualize over time.<br/><br/>Features include daily notifications, detailed stats (streaks, reliability scores, best days), and <strong>historical accuracy</strong>—you can add or remove habits without messing up past data. It's a PWA so you can install it on your phone and get local notifications. Simple, clean, mobile-first design.<br/><br/>Built over a weekend with SvelteKit and PocketBase, so expect some quirks—but it fundamentally works and feels great to use.",
+				"I wanted a clean habit tracker that could actually motivate me by making progress feel visual and rewarding. After looking at the <strong>GitHub contribution graph</strong>, I was inspired to build something with the same familiar UX language, but focused specifically on daily habits and a more aesthetic, distraction-free experience.<br/><br/>trckr is a progressive web app where you check off habits each day and watch your consistency build over time through a GitHub-inspired <strong>habbit graph</strong>. It includes daily notifications, detailed stats (streaks, reliability scores, best days), and <strong>historical accuracy</strong>.<br/><br/>It's installable as a PWA with local notifications and designed mobile-first for quick daily use. Built over a weekend with SvelteKit and PocketBase, so expect a few quirks here and there, but the core experience is solid and I genuinely find it useful in my day to day.",
 			link: 'https://trckr-beige.vercel.app',
 			github: 'https://github.com/TechnoTalksDev/trckr',
 			tags: ['PWA', 'Productivity', 'Habit Tracking'],
@@ -279,7 +299,7 @@
 			img: '/projects/liquid-glass/liquid-glass.png',
 			showcaseImgs: [],
 			shortDescription:
-				'Recreation of iOS glass morphism media player powered by live Spotify data, built with SvelteKit and n8n backend for real-time sync.',
+				'Recreation of iOS 26 Liquid Glass media player powered by live Spotify data, built with SvelteKit and n8n backend for real-time sync.',
 			longDescription:
 				"I was incredibly fascinated by the <strong>iOS 26 “liquid glass”</strong> update on my iPhone and wanted to recreate the effect using SVG filters and other css shader tricks. I stumbled upon this video and decided to see how far I could push it. <br/><br/>This project is my own take on the iOS media player UI, with a bit of personal flair. The interface you see here is actually powered by <strong>live Spotify data</strong>, pulled every ~5 seconds, which enables the real-time progress bar for the currently playing song.<br/><br/>Playback, track skip, and volume controls are just there for the sake of UI completeness (and my sanity)—they're non-functional, since I didn’t want to give the internet full control over my music.<br/><br/>The backend is built using an <strong>n8n workflow</strong> and <strong>Redis cache</strong> to avoid hitting Spotify’s rate limits when handling multiple users. Threw this together in a day, so if you run into any quirks... just pretend you didn’t :)",
 			link: 'https://glass.chandanc.me/',
@@ -353,6 +373,19 @@
 			github: 'https://github.com/TechnoTalksDev/Reko',
 			tags: ['Discord', 'Minecraft', 'API'],
 			skills: [3, 2, 7]
+		},
+		{
+			name: 'filecord',
+			img: '/projects/filecord/filecord-demo.gif',
+			shortDescription:
+				'Web app that converts videos from any format into Discord-ready ~10MB MP4 files using a FastAPI + FFmpeg backend, real-time progress streaming, and automatic hardware-accelerated encoding.',
+			longDescription:
+				"I built FileCord in a day because I was annoyed by Discord's 10MB upload limit. I tried to share a short 19-second 1080p clip with friends, but it was too large, and every “free” compressor I found was clunky, paywalled, or just unusable.<br/><br/>So I asked AI to help me build the tool I actually wanted. The frontend came together quickly with a clean interface and smooth UX, but the backend took real iteration: I assembled a FastAPI service with a robust processing flow, live conversion progress over <strong>Server-Sent Events</strong>, and hardware acceleration support for faster encoding.<br/><br/>The result is a simple, fast, and completely free micro app that just works. For me, FileCord is proof that <strong>micro apps are the future</strong>: idea to working product is collapsing from weeks to hours, and the bottleneck is shifting from stack decisions to execution speed.",
+			//link: 'https://github.com/TechnoTalksDev/filecord',
+			github: 'https://github.com/TechnoTalksDev/filecord',
+			tags: ['Python', 'FastAPI', 'FFmpeg', 'MicroApp'],
+			skills: [3, 7],
+			active: true
 		}
 	];
 
@@ -400,7 +433,7 @@
 			company: '10A & 1523W',
 			position: 'Lead Developer',
 			blurb:
-				'Developing motion algorithms and autonomous routines for VEX Robotics, optimizing localization and system performance.',
+				'Developing <strong>motion algorithms and autonomous routines</strong> for VEX Robotics, optimizing localization and system performance.<br/><br/>Designed and implemented an <strong>award-winning custom telemetry system</strong> to stream live robot data for faster debugging and iteration.',
 			skills: [4, 7, 8]
 		},
 		{
@@ -408,7 +441,7 @@
 			company: 'Quadrant',
 			position: 'Intern',
 			blurb:
-				'Led interns as SCRUM master to build a data-driven application for a company pitch, leveraging modern cloud and AI technologies.',
+				'Led interns as <strong>SCRUM Master</strong> to build a data-driven application for a company pitch, leveraging modern cloud and AI technologies.<br/><br/>Competed with <strong>11+ collegiate teams</strong> as a high school intern and placed <strong>Top 3</strong> in the final pitch competition to top-level executives.',
 			skills: [0, 6, 7, 9]
 		},
 		{
@@ -416,7 +449,7 @@
 			company: 'SAHF',
 			position: 'CTO',
 			blurb:
-				'Oversee technology strategy, develop conversion-driven web solutions, and implement SEO-focused blogs and interactive tools.',
+				'Oversee <strong>technology strategy</strong> and build conversion-driven web solutions.<br/><br/>Implement <strong>SEO-focused blogs and interactive tools</strong> to improve growth and engagement.',
 			skills: [0, 6, 9]
 		},
 		{
@@ -424,7 +457,7 @@
 			company: 'NC FBLA',
 			position: 'Tech Committee',
 			blurb:
-				'Maintain NC FBLA’s tech initiatives, develop mobile solutions, and build digital tools for local business partners.',
+				'Maintain <strong>NC FBLA\'s technology initiatives</strong> and develop mobile solutions.<br/><br/>Build digital tools for local business partners to support chapter and community impact.',
 			skills: [10]
 		},
 		{
@@ -432,7 +465,7 @@
 			company: 'STEAMOJI ROBOTICS',
 			position: 'Public Relations',
 			blurb:
-				'A student-created and led robotics organization. Created a website to inform parents and students of updates, including live feeds of event and award data. Currently used as the primary communication center for all parents and students of the organization.',
+				'A <strong>student-created, student-led robotics organization</strong> focused on communication and community growth.<br/><br/>Created the website to inform parents and students with live event and award data, now used as the <strong>primary communication center</strong> for the organization.',
 			skills: [0, 1, 8]
 		}
 	];
@@ -504,7 +537,7 @@
 			<NewExperience {experiences} {skills} />
 		</div>
 		<!--arrow-->
-		<div class="flex-end">
+		<!-- <div class="flex-end">
 			<div
 				class="flex justify-center items-center w-[50px] h-[50px] rounded-full variant-soft-primary animate-bounce"
 			>
@@ -514,7 +547,7 @@
 				id="b-blob"
 				class="absolute bottom-[0rem] left-0 right-0 ml-auto mr-auto w-[5rem] h-[5rem] rounded-[50%] bg-gradient-to-br from-surface-500 via-primary-500 to-white opacity-40 overflow-x-hidden -z-10 blur-3xl"
 			></div>
-		</div>
+		</div> -->
 	</div>
 
 	<div
