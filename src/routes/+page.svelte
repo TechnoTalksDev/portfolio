@@ -224,7 +224,7 @@
 			img: '/projects/simeo/simeo_full.png',
 			showcaseImgs: [],
 			tagline:
-				'Top 5 @ National Conference Future Business Leaders of America <br/>500+ active users',
+				'Top 5 @ National FBLA Conference  <br/>1st @ Washington State FBLA Conference<br/>500+ active users',
 			shortDescription:
 				'The most powerful and intuitive grade calculator for StudentVue students with live editing, visual breakdowns, weighted GPA tracking, and AI-powered study insights.',
 			longDescription:
