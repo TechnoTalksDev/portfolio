@@ -61,11 +61,11 @@
 	>
 		<button
 			type="button"
-			class="absolute z-10 right-5 top-5 p-2 rounded-full hover:bg-white/10 transition-all"
+			class="absolute z-10 right-5 top-5 p-2 rounded-full hover:bg-white/30 transition-all"
 			on:click={close}
 			aria-label="Close project details"
 		>
-			<X class="w-7 h-7" color="rgba(255, 255, 255, .5)" />
+			<X class="w-8 h-8 fill-primary-400 stroke-primary-400" />
 		</button>
 
 		<a href={project.link ?? project.github} target="_blank">

@@ -124,6 +124,22 @@
 		timeout: 3000
 	};
 
+	const projectsHint: ToastSettings = {
+		message: '👀 Click on a project for more details!',
+		background: 'variant-glass-primary',
+		hideDismiss: true,
+		timeout: 5000
+	};
+
+	let firstProjectsScroll = false;
+
+	currentSection.subscribe((section) => {
+		if (section === 'projects' && !firstProjectsScroll) {
+			toastStore.trigger(projectsHint);
+			firstProjectsScroll = true;
+		}
+	});
+
 	function handleMailList() {
 		toastStore.trigger(mailList);
 	}
