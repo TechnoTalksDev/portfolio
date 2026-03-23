@@ -401,7 +401,6 @@
 			github: 'https://github.com/TechnoTalksDev/filecord',
 			tags: ['Python', 'FastAPI', 'FFmpeg', 'MicroApp'],
 			skills: [3, 7],
-			active: true
 		}
 	];
 
