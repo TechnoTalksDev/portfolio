@@ -683,37 +683,18 @@
 	-->
 </div>
 
-<style lang="postcss">
+<!--
 	.glow {
 		text-shadow: 5px 0px 20px rgba(255, 255, 255, 0.26);
 	}
 
-	.cursor {
+		.cursor {
 		@apply bg-primary-500;
 		@apply rounded opacity-70;
 		width: 0.25rem;
 		height: 1.5rem;
 
 		animation: blink 1s infinite;
-	}
-
-	@keyframes blink {
-		0%,
-		100% {
-			background-color: transparent;
-		}
-		50% {
-			@apply bg-primary-500;
-		}
-	}
-
-	@keyframes scroll {
-		0% {
-			transform: translateX(0);
-		}
-		100% {
-			transform: translateX(-50%);
-		}
 	}
 
 	.scroll-container {
@@ -745,6 +726,27 @@
 
 		-webkit-mask: var(--mask);
 		mask: var(--mask);
+	}
+-->
+
+<style lang="postcss">
+	@keyframes blink {
+		0%,
+		100% {
+			background-color: transparent;
+		}
+		50% {
+			@apply bg-primary-500;
+		}
+	}
+
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-50%);
+		}
 	}
 
 	@keyframes wave {

@@ -295,19 +295,6 @@
 </div>
 
 <style lang="postcss">
-	.glow {
-		text-shadow: 5px 0px 20px rgba(255, 255, 255, 0.26);
-	}
-
-	.cursor {
-		@apply bg-primary-500;
-		@apply rounded opacity-70;
-		width: 0.25rem;
-		height: 1.5rem;
-
-		animation: blink 1s infinite;
-	}
-
 	@keyframes blink {
 		0%,
 		100% {
@@ -316,13 +303,6 @@
 		50% {
 			@apply bg-primary-500;
 		}
-	}
-
-	.animate-gradient {
-		background-size: 300%;
-		-webkit-animation: animatedgradient 6s ease infinite alternate;
-		-moz-animation: animatedgradient 6s ease infinite alternate;
-		animation: animatedgradient 6s ease infinite alternate;
 	}
 
 	@keyframes animatedgradient {
@@ -344,37 +324,6 @@
 		100% {
 			transform: translateX(-50%);
 		}
-	}
-
-	.scroll-container {
-		display: flex;
-		overflow: hidden;
-		white-space: nowrap;
-
-		--mask: linear-gradient(
-				to right,
-				rgba(0, 0, 0, 0) 0%,
-				rgba(0, 0, 0, 1) 10%,
-				rgba(0, 0, 0, 1) 90%,
-				rgba(0, 0, 0, 0) 100%
-			)
-			0% 0% / 100% 100% repeat-x;
-
-		-webkit-mask: var(--mask);
-		mask: var(--mask);
-	}
-
-	.scroll-content {
-		display: flex;
-		align-items: center;
-		animation: scroll 20s linear infinite;
-	}
-
-	.project-hero {
-		--mask: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-
-		-webkit-mask: var(--mask);
-		mask: var(--mask);
 	}
 
 	@keyframes wave {
