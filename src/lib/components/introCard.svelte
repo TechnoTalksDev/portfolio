@@ -41,7 +41,7 @@
 	<div class="inline my-8 h-[4px] rounded-xl gradient-bar animate-gradient" />
 	<div class="text-left">
 		<p class="h5 font-medium">
-			Entering university from 📍Washington. <strong>Builder obsessed with shipping</strong> — from
+			Entering university from 📍Washington. Building everything — from
 			<strong>quick ideas to scaled apps</strong>
 			serving <strong>thousands of users</strong>. Full-stack developer across web, mobile, 🤖
 			robotics, and APIs.

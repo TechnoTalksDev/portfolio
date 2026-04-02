@@ -255,7 +255,7 @@
 			name: 'Crusyn',
 			img: '/projects/crusyn/crusyn-website.png',
 			showcaseImgs: [],
-			tagline: '100+ TestFlight signups within 2 weeks',
+			tagline: '300+ TestFlight signups within 2 weeks',
 			shortDescription:
 				'Real-world driving game that turns your city into an open-world playground with map-based challenges, live scoring, leaderboards, and shareable run results.',
 			longDescription:
