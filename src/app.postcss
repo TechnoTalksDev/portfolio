@@ -15,6 +15,13 @@ body {
 	src: url('/fonts/Rajdhani-Regular.ttf');
 }
 
+@font-face {
+	/* Reference name */
+	font-family: 'Bumbbled';
+	/* For multiple files use commas, ex: url(), url(), ... */
+	src: url('/fonts/Bumbbled.otf');
+}
+
 /* NOTE: set your target theme name (ex: skeleton, wintry, modern, etc) */
 
 :root [data-theme='techno'] {
@@ -31,6 +38,22 @@ body {
 	@apply bg-gradient-to-br;
 	/* Color Stops */
 	@apply from-white via-primary-500 to-white;
+}
+
+.gradient-hero {
+	@apply bg-clip-text text-transparent box-decoration-clone;
+	/* Direction */
+	@apply bg-gradient-to-br;
+	/* Color Stops */
+	@apply from-warning-500 via-primary-500 to-warning-500;
+}
+
+.gradient-tertiary {
+	@apply bg-clip-text text-transparent box-decoration-clone;
+	/* Direction */
+	@apply bg-gradient-to-br;
+	/* Color Stops */
+	@apply from-tertiary-500 via-primary-500 to-tertiary-500;
 }
 
 .gradient-bar {
