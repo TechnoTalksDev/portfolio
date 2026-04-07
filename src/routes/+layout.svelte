@@ -13,6 +13,12 @@
 	import Unami from '$lib/components/unami.svelte';
 	import { currentSection } from '$lib/stores/sectionStore';
 
+	import { page } from '$app/state';
+
+	let currentPath = $derived(page.url.pathname);
+
+	$inspect(currentPath);
+
 	initializeStores();
 </script>
 
@@ -20,6 +26,7 @@
 <Toast position="br" padding="p-3" />
 <!-- App Shell -->
 <AppShell>
+	{#if currentPath === '/'}
 	<div class="absolute left-0 right-0 mt-0 ml-auto mr-auto flex flex-col items-center z-[2] w-fit">
 		<Dock
 			direction="middle"
@@ -112,7 +119,7 @@
 			</a>
 		</div> -->
 	</div>
-
+	{/if}
 	<!-- Page Route Content -->
 	<slot />
 </AppShell>
