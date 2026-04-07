@@ -2,18 +2,10 @@
 	import { prefersReducedMotion } from 'svelte/motion';
 	import { fade } from 'svelte/transition';
 	import { AnimationFrames, ScrollState } from 'runed';
-
-	export type CarouselItem = {
-		name: string;
-		img: string;
-		description: string;
-		location?: string;
-		date?: number;
-		shotOn?: string;
-	};
+	import type { StudioPhoto, StudioVideo } from '$lib/types';
 
 	type Props = {
-		items: CarouselItem[];
+		items: StudioPhoto[] | StudioVideo[];
 		intervalMs?: number;
 		ariaLabel?: string;
 		class?: string;
@@ -400,56 +392,58 @@
 		<div bind:this={trackEl} class="carousel-viewport py-8">
 			<div class="carousel-track flex items-center gap-48">
 				{#each items as item, index (`${item.img}-${index}`)}
-					<div
-						data-carousel-index={index}
-						role="group"
-						aria-roledescription="slide"
-						aria-label={`${index + 1} of ${items.length}: ${item.name}`}
-						class={[
-							'carousel-slide group relative flex shrink-0 items-center justify-center overflow-visible',
-							index === visibleIndex ? 'scale-100 opacity-100' : 'scale-[0.96] opacity-70'
-						]}
-					>
-						<div class="relative overflow-visible">
-							<img
-								id={`bg-${item.name}`}
-								src={item.img}
-								alt=""
-								aria-hidden="true"
-								class="pointer-events-none absolute -inset-0 z-0 h-[calc(100%)] w-[calc(100%)] max-w-none object-cover object-center opacity-60 blur-lg"
-								draggable="false"
-							/>
-							<article class="relative z-10 overflow-hidden rounded-2xl bg-surface-900/70 shadow-none">
-								<img src={item.img} alt={item.name} class="block h-auto w-full" draggable="false" />
-								<div
-									class="absolute inset-x-0 bottom-0 rounded-b-2xl p-4 sm:p-6"
-								>
-									<div
-										class="pointer-events-none absolute inset-x-0 bottom-0 h-full rounded-b-2xl bg-gradient-to-t from-black/85 via-black/40 to-transparent opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
-									></div>
-									<div class="relative z-10 transition-transform duration-500 ease-out group-hover:-translate-y-1">
-										<h3 class="text-xl text-white sm:text-2xl font-[bumbbled]">{item.name}</h3>
-										<div
-											class="max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-out group-hover:mt-2 group-hover:max-h-48 group-hover:opacity-100"
-										>
-											<p class="max-w-prose text-sm text-surface-100 sm:text-base">{item.description}</p>
-											{#if item.location || item.date || item.shotOn}
-												<p class="mt-2 text-xs uppercase tracking-wide text-surface-300 sm:text-sm">
-													{#if item.location}{item.location}{/if}
-													{#if item.location && item.date}
-														-
-													{/if}
-													{#if item.date}{item.date}{/if}
-													{#if item.shotOn}
-														- Shot on {item.shotOn}{/if}
-												</p>
-											{/if}
-										</div>
-									</div>
-								</div>
-							</article>
-						</div>
-					</div>
+					<a href="{item.link}" target="_blank" rel="noopener noreferrer">
+            <div
+              data-carousel-index={index}
+              role="group"
+              aria-roledescription="slide"
+              aria-label={`${index + 1} of ${items.length}: ${item.name}`}
+              class={[
+                'carousel-slide group relative flex shrink-0 items-center justify-center overflow-visible',
+                index === visibleIndex ? 'scale-100 opacity-100' : 'scale-[0.96] opacity-70'
+              ]}
+            >
+              <div class="relative overflow-visible">
+                <img
+                  id={`bg-${item.name}`}
+                  src={item.img}
+                  alt=""
+                  aria-hidden="true"
+                  class="pointer-events-none absolute -inset-0 z-0 h-[calc(100%)] w-[calc(100%)] max-w-none object-cover object-center opacity-60 blur-lg"
+                  draggable="false"
+                />
+                <article class="relative z-10 overflow-hidden rounded-2xl bg-surface-900/70 shadow-none">
+                  <img src={item.img} alt={item.name} class="block h-auto w-full" draggable="false" />
+                  <div
+                    class="absolute inset-x-0 bottom-0 rounded-b-2xl p-4 sm:p-6"
+                  >
+                    <div
+                      class="pointer-events-none absolute inset-x-0 bottom-0 h-full rounded-b-2xl bg-gradient-to-t from-black/85 via-black/40 to-transparent opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
+                    ></div>
+                    <div class="relative z-10 transition-transform duration-500 ease-out group-hover:-translate-y-1">
+                      <h3 class="text-xl text-white sm:text-2xl font-[bumbbled]">{item.name}</h3>
+                      <div
+                        class="max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-out group-hover:mt-2 group-hover:max-h-48 group-hover:opacity-100"
+                      >
+                        <p class="max-w-prose text-sm text-surface-100 sm:text-base">{item.description}</p>
+                        {#if item.location || item.date || item.shotOn}
+                          <p class="mt-2 text-xs uppercase tracking-wide text-surface-300 sm:text-sm">
+                            {#if item.location}{item.location}{/if}
+                            {#if item.location && item.date}
+                              -
+                            {/if}
+                            {#if item.date}{item.date}{/if}
+                            {#if item.shotOn}
+                              - Shot on {item.shotOn}{/if}
+                          </p>
+                        {/if}
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </a>
 				{/each}
 			</div>
 		</div>
