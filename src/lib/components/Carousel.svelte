@@ -278,23 +278,13 @@
 </script>
 
 <div
-	class={['relative isolate flex h-full w-full flex-col justify-center overflow-hidden', className]}
+	class={[
+		'relative isolate flex h-full w-full flex-col justify-center overflow-x-hidden overflow-y-visible',
+		className
+	]}
 >
-	<div aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-80">
-		{#if displayedBackgroundImage}
-			{#key displayedBackgroundImage}
-				<img
-					src={displayedBackgroundImage}
-					alt=""
-					aria-hidden="true"
-					class="absolute inset-0 h-full w-full object-cover"
-					style="filter: url(#carouselBackdropFilter); transform: translateZ(0); will-change: opacity;"
-					transition:fade={{ duration: 280 }}
-				/>
-			{/key}
-		{/if}
 
-		<div class="absolute inset-0 bg-surface-950/35"></div>
+<!-- 
 
 		<svg
 			class="absolute h-0 w-0 overflow-hidden opacity-0"
@@ -331,13 +321,13 @@
 				</filter>
 			</defs>
 		</svg>
-	</div>
+-->
 
 	<section
 		aria-roledescription="carousel"
 		aria-label={ariaLabel}
 		style="--slide-width: min(80vw, 64rem);"
-		class="relative z-10 my-auto w-full outline-none"
+		class="relative z-10 my-auto w-full overflow-visible outline-none"
 	>
 		<div class="mb-4 flex items-center justify-between px-4 sm:px-6">
 			<p class="text-sm tracking-wide text-surface-300">
@@ -393,65 +383,82 @@
 			</div>
 		</div>
 
-		<div
-			bind:this={trackEl}
-			class="carousel-track flex items-center gap-5 overflow-x-auto pb-6"
-		>
-			{#each items as item, index (`${item.img}-${index}`)}
-				<article
-					data-carousel-index={index}
-					role="group"
-					aria-roledescription="slide"
-					aria-label={`${index + 1} of ${items.length}: ${item.name}`}
-					class={[
-						'carousel-slide group relative shrink-0 overflow-hidden rounded-2xl  bg-surface-900/70 shadow-none',
-						index === visibleIndex ? 'scale-100 opacity-100' : 'scale-[0.96] opacity-70'
-					]}
-				>
-					<img src={item.img} alt={item.name} class="block h-auto w-full" draggable="false" />
+		<div bind:this={trackEl} class="carousel-viewport py-8">
+			<div class="carousel-track flex items-center gap-48">
+				{#each items as item, index (`${item.img}-${index}`)}
 					<div
-						class="absolute inset-x-0 bottom-0 rounded-b-2xl bg-gradient-to-t from-black/85 via-black/40 to-transparent p-4 transition-all duration-200 group-hover:translate-y-2 group-hover:opacity-0 sm:p-6"
+						data-carousel-index={index}
+						role="group"
+						aria-roledescription="slide"
+						aria-label={`${index + 1} of ${items.length}: ${item.name}`}
+						class={[
+							'carousel-slide group relative flex shrink-0 items-center justify-center overflow-visible',
+							index === visibleIndex ? 'scale-100 opacity-100' : 'scale-[0.96] opacity-70'
+						]}
 					>
-						<h3 class="text-xl font-bold text-white sm:text-2xl">{item.name}</h3>
-						<p class="mt-1 max-w-prose text-sm text-surface-100 sm:text-base">{item.description}</p>
-						{#if item.location || item.date || item.shotOn}
-							<p class="mt-2 text-xs uppercase tracking-wide text-surface-300 sm:text-sm">
-								{#if item.location}{item.location}{/if}
-								{#if item.location && item.date}
-									-
-								{/if}
-								{#if item.date}{item.date}{/if}
-								{#if item.shotOn}
-									- Shot on {item.shotOn}{/if}
-							</p>
-						{/if}
+						<div class="relative overflow-visible">
+							<img
+								id={`bg-${item.name}`}
+								src={item.img}
+								alt=""
+								aria-hidden="true"
+								class="pointer-events-none absolute -inset-0 z-0 h-[calc(100%)] w-[calc(100%)] max-w-none object-cover object-center opacity-60 blur-lg"
+								draggable="false"
+							/>
+							<article class="relative z-10 overflow-hidden rounded-2xl bg-surface-900/70 shadow-none">
+								<img src={item.img} alt={item.name} class="block h-auto w-full" draggable="false" />
+								<div
+									class="absolute inset-x-0 bottom-0 translate-y-2 rounded-b-2xl bg-gradient-to-t from-black/85 via-black/40 to-transparent p-4 opacity-0 transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100 sm:p-6"
+								>
+									<h3 class="text-xl  text-white sm:text-2xl font-[bumbbled]">{item.name}</h3>
+									<p class="mt-1 max-w-prose text-sm text-surface-100 sm:text-base">{item.description}</p>
+									{#if item.location || item.date || item.shotOn}
+										<p class="mt-2 text-xs uppercase tracking-wide text-surface-300 sm:text-sm">
+											{#if item.location}{item.location}{/if}
+											{#if item.location && item.date}
+												-
+											{/if}
+											{#if item.date}{item.date}{/if}
+											{#if item.shotOn}
+												- Shot on {item.shotOn}{/if}
+										</p>
+									{/if}
+								</div>
+							</article>
+						</div>
 					</div>
-				</article>
-			{/each}
+				{/each}
+			</div>
 		</div>
 	</section>
 </div>
 
 <style>
-	.carousel-track {
+	.carousel-viewport {
 		scroll-snap-type: x mandatory;
 		scroll-behavior: smooth;
-		overflow-y: visible;
-		overflow-x: auto;
 		overflow-anchor: none;
 		overscroll-behavior-x: contain;
-		padding-inline: max(0px, calc((100% - var(--slide-width)) / 2));
+		overflow-x: auto;
+		overflow-y: visible;
 		scrollbar-width: none;
 		-ms-overflow-style: none;
 	}
 
-	.carousel-track::-webkit-scrollbar {
+	.carousel-viewport::-webkit-scrollbar {
 		display: none;
+	}
+
+	.carousel-track {
+		width: max-content;
+		padding-block: 0.25rem;
+		padding-inline: max(0px, calc((100% - var(--slide-width)) / 2));
 	}
 
 	.carousel-slide {
 		width: var(--slide-width);
 		scroll-snap-align: center;
+		align-items: center;
 		transition:
 			transform 320ms ease,
 			opacity 320ms ease;
@@ -463,7 +470,7 @@
 	}
 
 	@media (prefers-reduced-motion: reduce) {
-		.carousel-track {
+		.carousel-viewport {
 			scroll-behavior: auto;
 		}
 

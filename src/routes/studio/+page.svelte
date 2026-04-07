@@ -79,7 +79,7 @@
 		</div>
 	</div>
 	<div class="h-screen w-screen items-center justify-center flex flex-col bg-black">
-		<Carousel items={photos} ariaLabel="Studio photographs" class="w-[100vw]" />
+		<Carousel items={photos} ariaLabel="Studio photographs" class="w-[100vw]" intervalMs={100000}/>
 	</div>
 </div>
 {/if}
