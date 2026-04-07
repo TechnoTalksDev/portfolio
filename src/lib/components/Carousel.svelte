@@ -91,6 +91,20 @@
 		return closestIndex === targetIndex || targetDistance <= centerTolerancePx;
 	}
 
+	function scrollSlideIntoViewport(target: HTMLElement, behavior: ScrollBehavior) {
+		if (!trackEl) return;
+
+		const viewportRect = trackEl.getBoundingClientRect();
+		const targetRect = target.getBoundingClientRect();
+		const deltaToCenter =
+			targetRect.left - viewportRect.left - (viewportRect.width / 2 - targetRect.width / 2);
+
+		trackEl.scrollTo({
+			left: trackEl.scrollLeft + deltaToCenter,
+			behavior
+		});
+	}
+
 	function finalizeProgrammaticScroll(index: number = getClosestSlideIndex()) {
 		visibleIndex = index;
 		targetIndex = index;
@@ -188,7 +202,7 @@
 			settleFrames.stop();
 		}
 
-		target.scrollIntoView({ behavior, inline: 'center', block: 'nearest' });
+		scrollSlideIntoViewport(target, behavior);
 	}
 
 	function onControlKeydown(event: KeyboardEvent) {
@@ -408,21 +422,30 @@
 							<article class="relative z-10 overflow-hidden rounded-2xl bg-surface-900/70 shadow-none">
 								<img src={item.img} alt={item.name} class="block h-auto w-full" draggable="false" />
 								<div
-									class="absolute inset-x-0 bottom-0 translate-y-2 rounded-b-2xl bg-gradient-to-t from-black/85 via-black/40 to-transparent p-4 opacity-0 transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100 sm:p-6"
+									class="absolute inset-x-0 bottom-0 rounded-b-2xl p-4 sm:p-6"
 								>
-									<h3 class="text-xl  text-white sm:text-2xl font-[bumbbled]">{item.name}</h3>
-									<p class="mt-1 max-w-prose text-sm text-surface-100 sm:text-base">{item.description}</p>
-									{#if item.location || item.date || item.shotOn}
-										<p class="mt-2 text-xs uppercase tracking-wide text-surface-300 sm:text-sm">
-											{#if item.location}{item.location}{/if}
-											{#if item.location && item.date}
-												-
+									<div
+										class="pointer-events-none absolute inset-x-0 bottom-0 h-full rounded-b-2xl bg-gradient-to-t from-black/85 via-black/40 to-transparent opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
+									></div>
+									<div class="relative z-10 transition-transform duration-500 ease-out group-hover:-translate-y-1">
+										<h3 class="text-xl text-white sm:text-2xl font-[bumbbled]">{item.name}</h3>
+										<div
+											class="max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-out group-hover:mt-2 group-hover:max-h-48 group-hover:opacity-100"
+										>
+											<p class="max-w-prose text-sm text-surface-100 sm:text-base">{item.description}</p>
+											{#if item.location || item.date || item.shotOn}
+												<p class="mt-2 text-xs uppercase tracking-wide text-surface-300 sm:text-sm">
+													{#if item.location}{item.location}{/if}
+													{#if item.location && item.date}
+														-
+													{/if}
+													{#if item.date}{item.date}{/if}
+													{#if item.shotOn}
+														- Shot on {item.shotOn}{/if}
+												</p>
 											{/if}
-											{#if item.date}{item.date}{/if}
-											{#if item.shotOn}
-												- Shot on {item.shotOn}{/if}
-										</p>
-									{/if}
+										</div>
+									</div>
 								</div>
 							</article>
 						</div>
