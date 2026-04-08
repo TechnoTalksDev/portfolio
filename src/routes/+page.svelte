@@ -499,19 +499,19 @@
 
 <div
 	id="l-blob"
-	class="z-[-3] absolute w-[20rem] h-[17rem] rounded-[50%] bg-gradient-to-br from-error-500 via-tertiary-500 to-secondary-500 opacity-40 top-[-5rem] left-[-10rem] overflow-x-hidden"
+	class="z-[-3] absolute w-[20rem] h-[17rem] rounded-[50%] bg-gradient-to-br from-error-500 via-tertiary-500 to-secondary-500 opacity-40 top-[-5rem] left-[-10rem]"
 	style="animation-name: spin; animation-duration: 30s;"
 ></div>
 
 <div
 	id="r-blob"
-	class="z-[-3] absolute w-[20rem] h-[17rem] rounded-[50%] bg-gradient-to-br from-warning-500 via-tertiary-500 to-secondary-500 opacity-40 top-[-5rem] right-[-10rem] overflow-x-hidden"
+	class="z-[-3] absolute w-[20rem] h-[17rem] rounded-[50%] bg-gradient-to-br from-warning-500 via-tertiary-500 to-secondary-500 opacity-40 top-[-5rem] right-[-10rem]"
 	style="animation-name: spin; animation-duration: 30s;"
 ></div>
 
 <div
 	id="m-blob"
-	class="absolute top-[-6rem] left-0 right-0 ml-auto mr-auto w-[10rem] h-[8rem] rounded-[50%] bg-gradient-to-br from-surface-500 via-primary-500 to-white opacity-40 overflow-x-hidden"
+	class="absolute top-[-6rem] left-0 right-0 ml-auto mr-auto w-[10rem] h-[8rem] rounded-[50%] bg-gradient-to-br from-surface-500 via-primary-500 to-white opacity-40"
 ></div>
 
 <!--
@@ -519,10 +519,11 @@
 </div>
 -->
 
-<div class="h-[100vh] w-[100vw] backdrop-blur-3xl overflow-x-hidden scroll-smooth">
+<div class="h-[100vh] w-[100vw] backdrop-blur-3xl overflow-x-hidden scroll-smooth" style="padding-bottom: var(--safe-area-inset-bottom, 0px);">
 	<div
 		id="hey"
 		class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden"
+		style="padding-bottom: max(1rem, var(--safe-area-inset-bottom, 1rem));"
 	>
 		<div class="h-full text-center flex flex-col items-center justify-center">
 			<IntroCard />
@@ -547,6 +548,7 @@
 	<div
 		id="experience"
 		class="container min-h-[100vh] h-fit w-fit mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden"
+		style="padding-bottom: max(1rem, var(--safe-area-inset-bottom, 1rem));"
 	>
 		<div class="h-full flex flex-col col-span-2 flex-wrap items-center justify-center my-8">
 			<NewExperience {experiences} {skills} />
@@ -568,6 +570,7 @@
 	<div
 		id="projects"
 		class="container min-h-[100vh] h-fit w-fit mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden"
+		style="padding-bottom: max(1rem, var(--safe-area-inset-bottom, 1rem));"
 	>
 		<div class="h-full flex flex-col items-center justify-center my-8">
 			<ProjectCard {projects} {skills} />
@@ -577,6 +580,7 @@
 	<div
 		id="contact"
 		class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden"
+		style="padding-bottom: max(1rem, var(--safe-area-inset-bottom, 1rem));"
 	>
 		<ContactCall />
 	</div>

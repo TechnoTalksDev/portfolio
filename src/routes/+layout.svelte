@@ -28,7 +28,8 @@
 <AppShell>
 	{#if currentPath === '/'}
 		<div
-			class="absolute left-0 right-0 mt-0 ml-auto mr-auto flex flex-col items-center z-[2] w-fit"
+			class="absolute left-0 right-0 ml-auto mr-auto flex flex-col items-center z-[2] w-fit"
+			style="padding-top: var(--safe-area-inset-top, 0px);"
 		>
 			<Dock
 				direction="middle"
