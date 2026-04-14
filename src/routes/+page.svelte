@@ -55,7 +55,7 @@
 		typeSub();
 	}
 
-	const longWhile = 30000;
+	const longWhile = 60000;
 
 	const comingSoon: ToastSettings = {
 		message:

@@ -167,7 +167,7 @@ Create a ~60-second video containing the following 3 props and the line of dialo
 			/>
 		</div>
 		<div id="letter" class="h-screen w-screen items-center justify-center flex flex-col bg-black">
-			<div class="text-lg sm:text-xl w-[30rem] max-w-[90vw] leading-10">
+			<div class="text-lg sm:text-xl w-[30rem] max-w-[90vw] leading-8 sm:leading-10">
 				<p class="">
 					I started by <strong>messing around</strong> with my dad’s phone, just taking photos of
 					whatever looked interesting.
@@ -191,7 +191,7 @@ Create a ~60-second video containing the following 3 props and the line of dialo
 					the other side of my portfolio, where I build <strong>real-world</strong> projects that solve
 					problems and create value.
 				</p>
-				<p class="text-right mt-12 text-xl sm:text-2xl">
+				<p class="text-right mt-6 sm:mt-12 text-lg sm:text-2xl">
 					- <span class="font-[bumbbled] gradient-heading">Chandan</span>
 				</p>
 			</div>
