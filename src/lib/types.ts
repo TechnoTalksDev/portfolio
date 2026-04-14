@@ -18,3 +18,25 @@ export interface Project {
 	skills: number[];
 	active?: boolean;
 }
+
+export interface StudioPhoto {
+	name: string;
+	img: string;
+	description: string;
+	location?: string;
+	date: string;
+	shotOn: string;
+	featuring?: string[];
+	honors?: string[];
+}
+
+export interface StudioVideo {
+	name: string;
+	img: string;
+	link: string;
+	description: string;
+	date: string;
+	shotOn: string;
+	featuring?: string[];
+	honors?: string[];
+}
