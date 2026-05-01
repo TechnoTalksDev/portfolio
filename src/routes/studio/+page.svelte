@@ -46,6 +46,16 @@
 
 	const videos: StudioVideo[] = [
 		{
+			name: "you're missing",
+			description:`A young detective finds himself lost in endless cases
+Made in less than 48 hours for WATSA On Demand 2026`,
+			img: '/videos/thumbnails/missing.png',
+			link: 'https://www.youtube.com/watch?v=eBgO1mCLywo',
+			date: 'April 2026',
+			shotOn: 'Sony A7IV & Sigma 24-70mm f/2.8',
+			featuring: ['Rishi S.', 'Junaid A.']
+		},
+		{
 			name: 'Crusyn Launch',
 			description: `Crusyn is building real-world games designed to turn everyday moments
 into shared experiences — no feeds, no maps, no mindless scrolling.
@@ -55,7 +65,7 @@ Crusyn is about doing more with the world around you.`,
 			img: '/videos/thumbnails/crusyn-launch.png',
 			link: 'https://www.youtube.com/watch?v=Inn_otN0v2Y',
 			date: 'January 2026',
-			shotOn: 'Sony A7IV 50mm f/1.8',
+			shotOn: 'Sony A7IV & Zeiss 55mm f/1.8',
 			featuring: ['Rishi S.', 'Ryan P.']
 		},
 		{
@@ -68,7 +78,7 @@ Create a ~60-second video containing the following 3 props and the line of dialo
 -Dialogue: the phrase “this is peak`,
 			link: 'https://www.youtube.com/watch?v=qq5_94hpEX4',
 			date: 'November 2025',
-			shotOn: 'Sony A7IV 50mm f/1.8',
+			shotOn: 'Sony A7IV & Zeiss 55mm f/1.8',
 			img: '/videos/thumbnails/thisispeak.png',
 			honors: ['TSA WA State Qualifier 2025'],
 			featuring: ['Shikha P.', 'Niteesh AJ']
@@ -77,7 +87,7 @@ Create a ~60-second video containing the following 3 props and the line of dialo
 			name: 'The Lincoln Test',
 			description: `A short historical comedy film about Lincoln made in a week for TSA Digital Video Production.`,
 			date: 'December 2025',
-			shotOn: 'Sony A7IV 50mm f/1.8',
+			shotOn: 'Sony A7IV & Zeiss 55mm f/1.8',
 			img: '/videos/thumbnails/lincoln2.png',
 			link: 'https://www.youtube.com/watch?v=mVhWnavYEEw',
 			featuring: ['Rishi S.']
@@ -169,7 +179,7 @@ Create a ~60-second video containing the following 3 props and the line of dialo
 		<div id="letter" class="h-screen w-screen items-center justify-center flex flex-col bg-black">
 			<div class="text-lg sm:text-xl w-[30rem] max-w-[90vw] leading-8 sm:leading-10">
 				<p class="">
-					I started by <strong>messing around</strong> with my dad’s phone, just taking photos of
+					I started out by <strong>messing around</strong> with my dad’s old phone, just taking photos of
 					whatever looked interesting.
 					<br /> <br />
 					Somewhere along the way, it turned into something more. I started noticing
