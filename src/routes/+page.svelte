@@ -236,6 +236,20 @@
 		// 	skills: [8, 4, 3, 7]
 		// },
 		{
+			name: 'Zapp',
+			img: '/projects/zapp/twitter-card.png',
+			showcaseImgs: [],
+			tagline: 'Live on the App Store!',
+			shortDescription:
+				'Party games built for real life: one phone, three games, no setup, and a fast, chaotic way to keep the whole group involved.',
+			longDescription:
+				'Zapp is the group party game built for the moment when someone wants to play, but nobody wants to haul out a box. It packs <strong>3 party games into one pass-around phone</strong>, so your group can start instantly and keep the night moving. Whether you are at a boba shop, on a road trip, or turning a boring Tuesday into something memorable, Zapp gives you a fast, social way to get everyone involved.<br/><br/>The experience is centered around a character who thinks he understands humans and is wrong every single time. That is where the fun comes from: clever bluffing, real-time accusations, and group energy that gets louder the longer you play. With <strong>no setup</strong>, <strong>no box</strong>, and play for just <strong>$2 a night</strong>, Zapp is designed to feel easy to start and hard to put down.<br/><br/>Every round is different because your group is different. The more you play, the weirder it gets.',
+			link: 'https://zapp.chandanc.me/',
+			tags: ['iOS', 'App Store', 'Games'],
+			skills: [11, 1, 13, 14],
+			active: true
+		},
+		{
 			name: 'Simeo',
 			img: '/projects/simeo/simeo_full.png',
 			showcaseImgs: [],
