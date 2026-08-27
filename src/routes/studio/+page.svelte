@@ -4,7 +4,27 @@
 	import { ArrowDown } from 'lucide-svelte';
 	import { blur } from 'svelte/transition';
 
-	const photos: StudioPhoto[] = [
+	// load enhanced-processed images via Vite so `@sveltejs/enhanced-img` can optimize them
+	const photoModules = import.meta.glob('/static/photos/*.{jpg,jpeg,png,webp,WebP,JPG,JPEG,PNG}', {
+		eager: true,
+		query: { enhanced: true }
+	});
+
+	function resolveImage(path: string) {
+		const candidates = [
+			path,
+			'/static' + path,
+			path.replace(/^\//, ''),
+			'/static/' + path.replace(/^\//, '')
+		];
+		for (const key of candidates) {
+			const mod = (photoModules as Record<string, any>)[key];
+			if (mod) return mod.default ?? mod;
+		}
+		throw new Error(`Enhanced import not found for ${path}`);
+	}
+
+	const rawPhotos: StudioPhoto[] = [
 		{
 			name: "rainier's blanket",
 			img: '/photos/rainier-clouds.jpg',
@@ -71,16 +91,34 @@
 			description: 'one of the funniest guys i know',
 			date: 'March 2026',
 			shotOn: 'Sony A7IV 30mm f/2.8'
-		} /*{
-		name: "robot go whee",
-		img: "/photos/1523W.jpg",
-		description: "at a VEX robotics competition mid match action",
-		date: "2025",
-		shotOn: "Sony A7IV 55mm f/1.8",
-	}*/
+		}
 	];
 
-	const videos: StudioVideo[] = [
+	const photos: StudioPhoto[] = rawPhotos.map((p) => ({
+		...p,
+		img: resolveImage(p.img as string)
+	}));
+
+	const videoModules = import.meta.glob('/static/videos/thumbnails/*.{png,jpg,jpeg,webp,WebP}', {
+		eager: true,
+		query: { enhanced: true }
+	});
+
+	function resolveVideoImage(path: string) {
+		const candidates = [
+			path,
+			'/static' + path,
+			path.replace(/^\//, ''),
+			'/static/' + path.replace(/^\//, '')
+		];
+		for (const key of candidates) {
+			const mod = (videoModules as Record<string, any>)[key];
+			if (mod) return mod.default ?? mod;
+		}
+		throw new Error(`Enhanced import not found for ${path}`);
+	}
+
+	const rawVideos: StudioVideo[] = [
 		{
 			name: "you're missing",
 			description: `A young detective finds himself lost in endless cases
@@ -129,6 +167,11 @@ Create a ~60-second video containing the following 3 props and the line of dialo
 			featuring: ['Rishi S.']
 		}
 	];
+
+	const videos: StudioVideo[] = rawVideos.map((v) => ({
+		...v,
+		img: resolveVideoImage(v.img as string)
+	}));
 
 	let animate = $state(false);
 

@@ -25,8 +25,19 @@
 	let targetIndex = $state(0);
 	let visibleIndex = $state(0);
 	let isProgrammaticScroll = $state(false);
-	let requestedBackgroundImage = $derived(items[targetIndex]?.img ?? '');
+	function imageToUrl(img: any): string {
+		if (!img) return '';
+		if (typeof img === 'string') return img;
+		if (typeof img === 'object') return (img.src as string) ?? (img.default as string) ?? '';
+		return String(img);
+	}
+
+	let requestedBackgroundImage = $state('');
 	let displayedBackgroundImage = $state('');
+
+	$effect(() => {
+		requestedBackgroundImage = imageToUrl(items[targetIndex]?.img ?? '');
+	});
 	let settledCandidateIndex = -1;
 	let settledCandidateFrames = 0;
 
@@ -390,7 +401,7 @@
 
 		<div bind:this={trackEl} class="carousel-viewport py-8">
 			<div class="carousel-track flex items-center gap-48">
-				{#each items as item, index (`${item.img}-${index}`)}
+				{#each items as item, index (index)}
 					<a href={item.link} target="_blank" rel="noopener noreferrer">
 						<div
 							data-carousel-index={index}
@@ -403,7 +414,7 @@
 							]}
 						>
 							<div class="relative overflow-visible max-h-[min(72vh,44rem)]">
-								<img
+								<enhanced:img
 									id={`bg-${item.name}`}
 									src={item.img}
 									alt=""
@@ -414,7 +425,7 @@
 								<article
 									class="relative z-10 overflow-hidden rounded-2xl bg-surface-900/70 shadow-none"
 								>
-									<img
+									<enhanced:img
 										src={item.img}
 										alt={item.name}
 										class="block max-h-[min(72vh,44rem)] w-full object-contain"
