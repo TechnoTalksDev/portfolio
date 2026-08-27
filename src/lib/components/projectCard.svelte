@@ -41,7 +41,7 @@
 				<div class="absolute top-4 right-4 z-10 flex flex-row items-center justify-center gap-2">
 					{#if project.active}
 						<!-- <span class="text-sm font-bold ">Active</span> -->
-						<div class="w-2 h-2 rounded-full animate-ping bg-green-500"></div>
+						<!-- <div class="w-2 h-2 rounded-full animate-ping bg-green-500"></div> -->
 					{/if}
 				</div>
 				<div

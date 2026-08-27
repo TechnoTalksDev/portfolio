@@ -6,19 +6,33 @@
 
 	const photos: StudioPhoto[] = [
 		{
+			name: "rainier's blanket",
+			img: '/photos/rainier-clouds.jpg',
+			description: 'a blanket of clouds greeting the peak of Mt. Rainier',
+			date: '2026',
+			shotOn: 'Sony A7IV'
+		},
+		{
+			name: "rainier's brothers",
+			img: '/photos/rainier-brothers.jpg',
+			description: 'elegant peaks next to Mt. Rainier in the sunrise',
+			date: '2026',
+			shotOn: 'Sony A7IV'
+		},
+		{
+			name: 'vintage sunset',
+			img: '/photos/sunset-small.jpg',
+			description:
+				'an aesthetic layer of grease and dust lends itself to a glowy nostalgic sunset. with the perfect gradient painted in the background silloueting the trees.',
+			date: '2025',
+			shotOn: 'Sony A7IV 55mm f/1.8'
+		},
+		{
 			name: 'Grey peace',
 			img: '/photos/grey.jpg',
 			description:
 				"A memorial that represents the grey history of the nation that now stands proud. It's hard to see the beauty in the grey, but it's important to remember it.",
 			location: 'Empty Sky Memorial, Jersey City, NJ',
-			date: '2025',
-			shotOn: 'Sony A7IV 55mm f/1.8'
-		},
-		{
-			name: 'vintage gradient',
-			img: '/photos/sunset-small.jpg',
-			description:
-				'an aesthetic layer of grease and dust lends itself to a glowy nostalgic sunset. with the perfect gradient painted in the background silloueting the trees.',
 			date: '2025',
 			shotOn: 'Sony A7IV 55mm f/1.8'
 		},
@@ -29,6 +43,28 @@
 			date: '2025',
 			shotOn: 'Sony A7IV 55mm f/1.8'
 		},
+		{
+			name: 'the blue m2',
+			img: '/photos/bmwm2.jpg',
+			description: 'a blue BMW M2 at Exotics RTC',
+			date: '2026',
+			shotOn: 'Sony A7IV'
+		},
+		{
+			name: 'ferrari',
+			img: '/photos/ferrari.jpg',
+			description: 'a beautiful red paint at Exotics RTC',
+			date: '2026',
+			shotOn: 'Sony A7IV'
+		},
+		{
+			name: 'three car',
+			img: '/photos/3car.jpg',
+			description: 'a group of friends lined up',
+			date: '2026',
+			shotOn: 'Sony A7IV'
+		},
+
 		{
 			name: 'teddyyy',
 			img: '/photos/teddyC.jpg',
@@ -47,7 +83,7 @@
 	const videos: StudioVideo[] = [
 		{
 			name: "you're missing",
-			description:`A young detective finds himself lost in endless cases
+			description: `A young detective finds himself lost in endless cases
 Made in less than 48 hours for WATSA On Demand 2026`,
 			img: '/videos/thumbnails/missing.png',
 			link: 'https://www.youtube.com/watch?v=eBgO1mCLywo',
@@ -179,8 +215,8 @@ Create a ~60-second video containing the following 3 props and the line of dialo
 		<div id="letter" class="h-screen w-screen items-center justify-center flex flex-col bg-black">
 			<div class="text-lg sm:text-xl w-[30rem] max-w-[90vw] leading-8 sm:leading-10">
 				<p class="">
-					I started out by <strong>messing around</strong> with my dad’s old phone, just taking photos of
-					whatever looked interesting.
+					I started out by <strong>messing around</strong> with my dad’s old phone, just taking
+					photos of whatever looked interesting.
 					<br /> <br />
 					Somewhere along the way, it turned into something more. I started noticing
 					<span

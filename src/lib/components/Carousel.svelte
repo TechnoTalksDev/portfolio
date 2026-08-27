@@ -402,13 +402,13 @@
 								index === visibleIndex ? 'scale-100 opacity-100' : 'scale-[0.96] opacity-70'
 							]}
 						>
-							<div class="relative overflow-visible">
+							<div class="relative overflow-visible max-h-[min(72vh,44rem)]">
 								<img
 									id={`bg-${item.name}`}
 									src={item.img}
 									alt=""
 									aria-hidden="true"
-									class="pointer-events-none absolute -inset-0 z-0 h-[calc(100%)] w-[calc(100%)] max-w-none object-cover object-center opacity-60 blur-lg"
+									class="pointer-events-none absolute inset-0 z-0 h-full w-full max-w-none object-cover object-center opacity-60 blur-lg"
 									draggable="false"
 								/>
 								<article
@@ -417,7 +417,7 @@
 									<img
 										src={item.img}
 										alt={item.name}
-										class="block h-auto w-full"
+										class="block max-h-[min(72vh,44rem)] w-full object-contain"
 										draggable="false"
 									/>
 									<div class="absolute inset-x-0 bottom-0 rounded-b-2xl p-4 sm:p-6">
